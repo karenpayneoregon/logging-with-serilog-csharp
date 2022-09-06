@@ -1,0 +1,16 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "6" /* disable logging */
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": ".\\LogFiles\\log.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}
