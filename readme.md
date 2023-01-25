@@ -15,7 +15,46 @@ By adding logging capabilities to an application which than can be sent to the d
 | CombinedConfigDemo | This project shows how to log to a SQL-Server database using NuGet package [Serilog.Sinks.MSSqlServer](https://www.nuget.org/packages/Serilog.Sinks.MSSqlServer/5.7.1?_src=template). Karen took this from the NuGet package repository site and made minor changes which include using `net6` |  
 | HidePathInExceptions | This project showcases logging to a file. Note the file Serilog.json is used to configure SeriLog. There are two additional json files, one for disabling logging so a developer need not change code, only one setting. |  
 |MultipleSubmitButtons2| Example to show how to create custom SeriLog color themes for the console in a Razor page project |
+| SeriLogLibrary | Class project, currently contains methods to change colors for writing to the console. |
 | WriteSeparateFromEfCore | Demonstrates SeriLog writing to a log and EF Core to a different log|
+
+
+# Which NuGet packages do I need?
+
+In Solution Explorer, double click on a project which will open the project file, copy out what is needed,
+
+Say these are what are needed
+
+```xml
+<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
+<PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+<PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+```
+
+Now open your project file and add
+
+```xml
+<ItemGroup>
+
+</ItemGroup>
+```
+
+Now paste the package references into the above group and save the project file.
+
+```xml
+<ItemGroup>
+   <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
+   <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+   <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+   <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+   <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+</ItemGroup>
+```
+
+Lastly, open `Manage NuGet packages` for your project, the references are there, see if there are any updates and if so update them.
+
 
 # Setup
 
@@ -43,14 +82,6 @@ Once installed these will be in the project file (you can take a fast track, ope
 
 Example for writing to the console `see project BasicLogging1`
 
-## Required NuGet packages
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Serilog" Version="2.11.0" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
-</ItemGroup>
-```
 
 ## Code in a console app
 
