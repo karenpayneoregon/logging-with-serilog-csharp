@@ -21,4 +21,8 @@
 	<ItemGroup>
 	  <Folder Include="assets\" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SeriLogLibrary\SeriLogLibrary.csproj" />
+	</ItemGroup>
 </Project>

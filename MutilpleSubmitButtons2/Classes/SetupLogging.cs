@@ -1,6 +1,7 @@
 ﻿using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
+using SeriLogLibrary;
 
 namespace MultipleSubmitButtons2.Classes;
 
@@ -14,11 +15,6 @@ public class SetupLogging
     /// </summary>
     public static void Development()
     {
-
-        //Log.Logger = new LoggerConfiguration()
-        //    //.MinimumLevel.Information()
-        //    .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information, theme: AnsiConsoleTheme.Literate)
-        //    .CreateLogger();
 
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Console(theme: SeriLogCustomThemes.Theme1())

@@ -20,7 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web projects", "Web project
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleSubmitButtons2", "MutilpleSubmitButtons2\MultipleSubmitButtons2.csproj", "{197964F9-B606-4413-A625-B341C3AAC781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteSeparateFromEfCore", "WriteSeparateFromEfCore\WriteSeparateFromEfCore.csproj", "{523D75B1-8A46-4394-9978-E6B06B6298C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WriteSeparateFromEfCore", "WriteSeparateFromEfCore\WriteSeparateFromEfCore.csproj", "{523D75B1-8A46-4394-9978-E6B06B6298C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriLogLibrary", "SeriLogLibrary\SeriLogLibrary.csproj", "{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{5ADD02E8-12CB-4191-8EC1-C0FB0750BA6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,10 @@ Global
 		{523D75B1-8A46-4394-9978-E6B06B6298C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523D75B1-8A46-4394-9978-E6B06B6298C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523D75B1-8A46-4394-9978-E6B06B6298C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +66,7 @@ Global
 		{8C66C23E-3C93-4C34-9CFC-B5FB28741971} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{197964F9-B606-4413-A625-B341C3AAC781} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 		{523D75B1-8A46-4394-9978-E6B06B6298C7} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
+		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F} = {5ADD02E8-12CB-4191-8EC1-C0FB0750BA6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}

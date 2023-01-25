@@ -15,20 +15,26 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-        Log.Information("{TimeOfDay} {UserName} to working with {title}", Howdy.TimeOfDay(), "Karen", "SeriLog");
+        
     }
 
     public IActionResult OnPostButton1(IFormCollection data)
     {
         Log.Information($"Entering {nameof(OnPostButton1)}");
-        return Page();
+        return new RedirectToPageResult("Index");
     }
 
 
     public IActionResult OnPostButton2(IFormCollection data)
     {
         Log.Information($"Entering {nameof(OnPostButton2)}");
-        return Page();
+        return new RedirectToPageResult("Index");
+    }
+
+    public IActionResult OnPostButton3(IFormCollection data)
+    {
+        Log.Information("{TimeOfDay} {UserName} to working with {title} some number {number}", Howdy.TimeOfDay(), "Karen", "SeriLog",100);
+        return new RedirectToPageResult("Index");
     }
 }
 

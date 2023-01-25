@@ -1,5 +1,7 @@
 # Implement logging with Serilog
 
+![Seri Title](assets/seriTitle.png)
+
 Logging can be critical to the success of an application which range from an enterprise application to an application and developer wrote to get paid for.
 
 Without proper logging, imagine attempting to assist a customer or business user were going to their location is impossible and/or using Microsoft Teams or similar application does not provide sufficient information to diagnose the problem.
