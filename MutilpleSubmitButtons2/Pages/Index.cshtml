@@ -1,0 +1,15 @@
+﻿@page
+@model MultipleSubmitButtons2.Pages.IndexModel
+@{
+    ViewData["Title"] = "Submits";
+}
+
+<link rel="stylesheet" href="css/indexPage.css"/>
+
+<div class="content">
+    <form method="post">
+        <input type="submit" value="Test1" class="btn btn-primary" asp-page-handler="Button1"/>
+        <input type="submit" value="Test2" class="btn btn-primary" asp-page-handler="Button2" />
+    </form>
+</div>
+

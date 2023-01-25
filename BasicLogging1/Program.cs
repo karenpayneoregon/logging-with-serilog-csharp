@@ -1,37 +1,39 @@
-﻿using Serilog;
+﻿using BasicLogging1.Classes;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 using Spectre.Console;
 
 namespace BasicLogging1;
 
-internal class Program
+internal partial class Program
 {
     static void Main(string[] args)
     {
         AnsiConsole.MarkupLine("[cyan]Creating log[/]");
         Console.WriteLine();
 
-        using var log = new LoggerConfiguration()
-            .WriteTo.Console()
-            .CreateLogger();
+
+        SetupLogging.Development();
 
         AnsiConsole.MarkupLine("[cyan]Simple logging[/]");
         Console.WriteLine();
-        log.Information("Hello, Serilog!");
+        Log.Information("Hello, Serilog!");
 
         Console.WriteLine();
 
-        log.Error(new Exception("Bogus"), "Your message goes here");
+        Log.Error(new Exception("Bogus"), "Your message goes here");
 
         Console.WriteLine();
 
-        log.Warning(new Exception("Bogus"),"Your warning");
+        Log.Warning(new Exception("Bogus"),"Your warning");
 
         Console.WriteLine();
 
   
         Person person = new() { Id = 1, FirstName = "Karen", LastName = "Payne"};
-        log.Information("Processed {@Person}", person);
-        log.Information("Bye, Serilog!");
+        Log.Information("Processed {@Person}", person);
+        Log.Information("Bye, Serilog!");
+        ExitPrompt();
         Console.ReadLine();
 
     }
