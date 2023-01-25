@@ -9,6 +9,14 @@ Without proper logging, imagine attempting to assist a customer or business user
 
 By adding logging capabilities to an application which than can be sent to the developer can save time figuring out a problem.
 
+## Scope of information
+
+There are many options and libraries for SeriLog, the information provide should be considered the basics to intermidate level for logging.
+
+## Obsolete
+
+As SeriLog matures there will be some libraries that will become obsolete, they may still work and with that advise to not use them as these libraries may break functionality down the road.
+
 | Project        |   Description |
 |:------------- |:-------------|
 | BasicLogging1 |  This project shows logging to the console which can be useful for learning and/or for debugging as one learns how to code. | 
@@ -17,6 +25,7 @@ By adding logging capabilities to an application which than can be sent to the d
 |MultipleSubmitButtons2| Example to show how to create custom SeriLog color themes for the console in a Razor page project |
 | SeriLogLibrary | Class project, currently contains methods to change colors for writing to the console. |
 | WriteSeparateFromEfCore | Demonstrates SeriLog writing to a log and EF Core to a different log|
+| WriteToNotePadApp | Demonstrates using a third party sink to write logs to notepad |
 
 
 # Which NuGet packages do I need?
@@ -155,6 +164,7 @@ Serilog provides [sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
 # See also
 
 - SeriLog [home page](https://serilog.net/)
+- Serilog [Best Practices](https://benfoster.io/blog/serilog-best-practices/) :heavy_check_mark:
 - Seq [log viewer](https://datalust.co/seq)
 - [Customized JSON formatting with Serilog](https://nblumhardt.com/2021/06/customize-serilog-json-output/)
 

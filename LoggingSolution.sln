@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrichApp1", "EnrichApp1\EnrichApp1.csproj", "{7C4D1155-BDEA-4865-81AE-F0692D02DD35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToNotePadApp", "WriteToNotePadApp\WriteToNotePadApp.csproj", "{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{7C4D1155-BDEA-4865-81AE-F0692D02DD35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C4D1155-BDEA-4865-81AE-F0692D02DD35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C4D1155-BDEA-4865-81AE-F0692D02DD35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{523D75B1-8A46-4394-9978-E6B06B6298C7} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 		{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F} = {5ADD02E8-12CB-4191-8EC1-C0FB0750BA6B}
 		{7C4D1155-BDEA-4865-81AE-F0692D02DD35} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
+		{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}
