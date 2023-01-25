@@ -1,0 +1,37 @@
+﻿@page
+@model WriteSeparateFromEfCore.Pages.ListPageModel
+
+@{
+    ViewData["Title"] = "ListPage";
+}
+
+
+
+
+<table class="table table-bordered">
+    <thead class="table-primary">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserLogin[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserLogin[0].Pin)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.UserLogin)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pin)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
