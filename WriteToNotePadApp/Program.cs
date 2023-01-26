@@ -15,8 +15,6 @@ internal partial class Program
             await Task.Delay(1000);
         }
 
-
-
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Notepad()
             .CreateLogger();
