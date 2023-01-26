@@ -10,9 +10,13 @@ internal partial class Program
 
         if (Process.GetProcessesByName("notepad").Length == 0)
         {
-            AnsiConsole.MarkupLine("[cyan]Had to start notepad[/]");
+            AnsiConsole.MarkupLine("[cyan]Had to start[/] [yellow]notepad[/]");
             Process.Start("notepad.exe");
             await Task.Delay(1000);
+        }
+        else
+        {
+            AnsiConsole.MarkupLine("[cyan]Using opened[/] [yellow]notepad[/]");
         }
 
         Log.Logger = new LoggerConfiguration()

@@ -22,13 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleSubmitButtons2", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WriteSeparateFromEfCore", "WriteSeparateFromEfCore\WriteSeparateFromEfCore.csproj", "{523D75B1-8A46-4394-9978-E6B06B6298C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriLogLibrary", "SeriLogLibrary\SeriLogLibrary.csproj", "{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeriLogLibrary", "SeriLogLibrary\SeriLogLibrary.csproj", "{278CFD0F-07FB-4D3F-AE05-BBDD4EEC636F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{5ADD02E8-12CB-4191-8EC1-C0FB0750BA6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrichApp1", "EnrichApp1\EnrichApp1.csproj", "{7C4D1155-BDEA-4865-81AE-F0692D02DD35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnrichApp1", "EnrichApp1\EnrichApp1.csproj", "{7C4D1155-BDEA-4865-81AE-F0692D02DD35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToNotePadApp", "WriteToNotePadApp\WriteToNotePadApp.csproj", "{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WriteToNotePadApp", "WriteToNotePadApp\WriteToNotePadApp.csproj", "{19A3E9E4-F2A5-4C6F-94C8-0D6CC1E42A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
