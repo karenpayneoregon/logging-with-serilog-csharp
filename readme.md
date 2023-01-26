@@ -13,6 +13,19 @@ By adding logging capabilities to an application which than can be sent to the d
 
 There are many options and libraries for SeriLog, the information provide should be considered the basics to intermidate level for logging.
 
+## Log levels 
+
+Before you begin logging understand .NET has six main logging levels:
+
+| Level    |   Description    |
+|:------------- |:-------------|
+|  Critical| Identifies failures possibly leaving the app unable to function correctly. Exceptions such as out-of-memory and disk running out of space fall in this category. |
+| Error |  Identifies errors and exceptions disrupting an operation, such as a database error preventing a record from being saved. Despite encountering errors for an operation, the application can continue functioning normally for other operations. |
+| Warning |  A warning might not crash the application, but it’s an issue potentially leading to more critical errors. A warning is simply a level for alerting the administrator of a possible problem. |
+| Information | Provides details about what’s happening behind the scenes in the application. Log messages can provide context when you need to understand the steps leading to an error. |
+| Debug | Tracks detailed information useful during `development.` |
+| Trace |  Also tracks detailed information and may include sensitive information such as passwords. It has minimal use and isn’t used at all by framework libraries. |
+
 ## Obsolete
 
 As SeriLog matures there will be some libraries that will become obsolete, they may still work and with that advise to not use them as these libraries may break functionality down the road.
