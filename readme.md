@@ -33,7 +33,7 @@ As SeriLog matures there will be some libraries that will become obsolete, they 
 | Project        |   Description |
 |:------------- |:-------------|
 | BasicLogging1 |  This project shows logging to the console which can be useful for learning and/or for debugging as one learns how to code. | 
-| CombinedConfigDemo | This project shows how to log to a SQL-Server database using NuGet package [Serilog.Sinks.MSSqlServer](https://www.nuget.org/packages/Serilog.Sinks.MSSqlServer/5.7.1?_src=template). Karen took this from the NuGet package repository site and made minor changes which include using `net6` |  
+| SqlServerSink | This project shows how to log to a SQL-Server database using NuGet package [Serilog.Sinks.MSSqlServer](https://www.nuget.org/packages/Serilog.Sinks.MSSqlServer/5.7.1?_src=template). Karen took this from the NuGet package repository site and made major changes which include using `net7` |  
 | HidePathInExceptions | This project showcases logging to a file. Note the file Serilog.json is used to configure SeriLog. There are two additional json files, one for disabling logging so a developer need not change code, only one setting. |  
 |MultipleSubmitButtons2| Example to show how to create custom SeriLog color themes for the console in a Razor page project |
 | SeriLogLibrary | Class project, currently contains methods to change colors for writing to the console. |
