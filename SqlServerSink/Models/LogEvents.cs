@@ -3,6 +3,7 @@
 using Serilog.Events;
 using System;
 using System.Collections.Generic;
+using SqlServerSink.Models;
 
 namespace CombinedConfigDemo.Models;
 

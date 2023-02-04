@@ -1,12 +1,12 @@
-﻿using Serilog;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using CombinedConfigDemo.Data;
 using CombinedConfigDemo.Models;
-using Spectre.Console;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Spectre.Console;
 
-namespace CombinedConfigDemo.Classes;
+namespace SqlServerSink.Classes;
 
 [SuppressMessage("ReSharper", "PossibleInvalidOperationException")]
 internal class LogOperations

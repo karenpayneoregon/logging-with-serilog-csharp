@@ -1,5 +1,5 @@
 ﻿#nullable disable
-namespace CombinedConfigDemo.Models;
+namespace SqlServerSink.Models;
 
 public class LogEntry
 {

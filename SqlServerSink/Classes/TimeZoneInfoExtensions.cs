@@ -1,4 +1,4 @@
-﻿namespace CombinedConfigDemo.Classes;
+﻿namespace SqlServerSink.Classes;
 public static class TimeZoneInfoExtensions
 {
     public static string GetDisplayNameWithCurrentOffset(this TimeZoneInfo timezone, DateTimeOffset date)

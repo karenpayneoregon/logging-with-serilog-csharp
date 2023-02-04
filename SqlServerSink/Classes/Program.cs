@@ -1,8 +1,7 @@
 ﻿using Spectre.Console;
 using System.Runtime.CompilerServices;
-using CombinedConfigDemo.Classes;
 using ConsoleHelperLibrary.Classes;
-
+using SqlServerSink.Classes;
 using Rule = Spectre.Console.Rule;
 
 // ReSharper disable once CheckNamespace

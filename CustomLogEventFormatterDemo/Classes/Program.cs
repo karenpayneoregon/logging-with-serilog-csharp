@@ -31,5 +31,6 @@ public partial class Program
         Render(new Rule($"[white on blue]Press a key to exit the demo[/]")
             .RuleStyle(Style.Parse("cyan"))
             .Centered());
+        Console.ReadLine();
     }
 }

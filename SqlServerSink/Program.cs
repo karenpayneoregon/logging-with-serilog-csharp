@@ -1,9 +1,6 @@
-﻿using System.Text.Json;
-using CombinedConfigDemo.Classes;
-using Serilog;
+﻿using SqlServerSink.Classes;
 
-
-namespace CombinedConfigDemo;
+namespace SqlServerSink;
 
 // This sample app reads connection string and column options from appsettings.json
 internal static partial class Program

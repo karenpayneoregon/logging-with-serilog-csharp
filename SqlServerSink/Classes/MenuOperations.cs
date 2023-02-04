@@ -1,7 +1,7 @@
-﻿using CombinedConfigDemo.Models;
-using Spectre.Console;
+﻿using Spectre.Console;
+using SqlServerSink.Models;
 
-namespace CombinedConfigDemo.Classes
+namespace SqlServerSink.Classes
 {
     class MenuOperations
     {

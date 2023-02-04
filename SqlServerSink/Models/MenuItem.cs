@@ -1,4 +1,4 @@
-﻿namespace CombinedConfigDemo.Models;
+﻿namespace SqlServerSink.Models;
 
 public class MenuItem
 {

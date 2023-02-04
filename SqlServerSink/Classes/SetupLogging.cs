@@ -2,7 +2,7 @@
 using Serilog;
 using Serilog.Sinks.MSSqlServer;
 
-namespace CombinedConfigDemo.Classes;
+namespace SqlServerSink.Classes;
 internal class SetupLogging
 {
     
