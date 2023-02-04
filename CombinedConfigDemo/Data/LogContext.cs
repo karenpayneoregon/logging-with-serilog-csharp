@@ -8,13 +8,13 @@ using Microsoft.Extensions.Configuration;
 
 namespace CombinedConfigDemo.Data;
 
-public partial class Context : DbContext
+public partial class LogContext : DbContext
 {
-    public Context()
+    public LogContext()
     {
     }
 
-    public Context(DbContextOptions<Context> options)
+    public LogContext(DbContextOptions<LogContext> options)
         : base(options)
     {
     }
@@ -24,7 +24,7 @@ public partial class Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
-        optionsBuilder.UseSqlServer(configuration.GetSection("ConnectionStrings")["DatabaseConnection"]);
+        optionsBuilder.UseSqlServer(configuration.GetSection("ConnectionStrings")["LogDatabase"]);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

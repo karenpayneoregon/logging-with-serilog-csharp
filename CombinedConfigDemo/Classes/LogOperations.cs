@@ -18,7 +18,7 @@ internal class LogOperations
     {
         static void TruncateLogTable()
         {
-            using var context = new Context();
+            using var context = new LogContext();
 
             var count = context.LogEvents.Count();
 
@@ -61,7 +61,7 @@ internal class LogOperations
 
     public static void ViewInformationEntries()
     {
-        using var context = new Context();
+        using var context = new LogContext();
         var list = context.LogEvents.Where(x => x.Level == "Information").ToList();
 
         var table = CreateTable("Information");
@@ -81,7 +81,7 @@ internal class LogOperations
 
     public static void ViewEntries(string logType)
     {
-        using var context = new Context();
+        using var context = new LogContext();
         var list = context.LogEvents.Where(x => x.Level == logType).ToList();
 
         var table = CreateTable("Error");
@@ -100,7 +100,7 @@ internal class LogOperations
     }
     public static void ViewErrorEntries()
     {
-        using var context = new Context();
+        using var context = new LogContext();
         var list = context.LogEvents.Where(x => x.Level == "Error").ToList();
 
         var table = CreateTable("Error");
@@ -120,7 +120,7 @@ internal class LogOperations
 
     public static void ViewWarningEntries()
     {
-        using var context = new Context();
+        using var context = new LogContext();
         var list = context.LogEvents.Where(x => x.Level == "Warning").ToList();
 
         var table = CreateTable("Warning");
