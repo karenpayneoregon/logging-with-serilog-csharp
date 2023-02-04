@@ -1,54 +1,59 @@
-﻿using System;
-using System.Data.SqlTypes;
-using System.Threading;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+﻿using System.Text.Json;
+using CombinedConfigDemo.Classes;
+using CombinedConfigDemo.Data;
 using Serilog;
-using Serilog.Sinks.MSSqlServer;
+using Spectre.Console;
 
 namespace CombinedConfigDemo
 {
     // This sample app reads connection string and column options from appsettings.json
     // while schema name, table name and autoCreateSqlTable are supplied programmatically
     // as parameters to the MSSqlServer() method.
-    public static class Program
+    internal static partial class Program
     {
-        private const string _connectionStringName = "LogDatabase";
-        private const string _schemaName = "dbo";
-        private const string _tableName = "LogEvents";
+
 
         public static void Main()
         {
-            var configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .Build();
-            var columnOptionsSection = configuration.GetSection("Serilog:ColumnOptions");
-            var sinkOptionsSection = configuration.GetSection("Serilog:SinkOptions");
 
+            while (true)
+            {
+                Console.Clear();
 
-            // New SinkOptions based interface
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.MSSqlServer(
-                    connectionString: _connectionStringName,
-                    sinkOptions: new MSSqlServerSinkOptions
-                    {
-                        TableName = _tableName,
-                        SchemaName = _schemaName,
-                        AutoCreateSqlTable = true
-                    },
-                    sinkOptionsSection: sinkOptionsSection,
-                    appConfiguration: configuration,
-                    columnOptionsSection: columnOptionsSection)
-                .CreateLogger();
+                var menuItem = AnsiConsole.Prompt(MenuOperations.SelectionPrompt());
+                if (menuItem.Id != -1)
+                {
+                    menuItem.Action();
+                }
+                else
+                {
+                    return;
+                }
+            }
 
-            Log.Information("Hello {Name} from thread {ThreadId}", Environment.GetEnvironmentVariable("USERNAME"), Thread.CurrentThread.ManagedThreadId);
+        }
 
+        private static void CreateSomeLogs()
+        {
+            Log.Information("Hello {Name} from thread {ThreadId}",
+                Environment.GetEnvironmentVariable("USERNAME"),
+                Thread.CurrentThread.ManagedThreadId);
+
+            Log.Information("First entry");
             Log.Warning("No coins remain at position {@Position}", new { Lat = 25, Long = 134 });
-            Log.Error(new JsonException("Something is wrong"),"Json issue");
+            Log.Error(new JsonException("Something is wrong"), "Json issue");
+            Log.Information("Last entry");
+
+            try
+            {
+                var lines = File.ReadAllLines("Customers.txt");
+            }
+            catch (Exception e)
+            {
+                Log.Error(e, "xxxx");
+            }
 
             Log.CloseAndFlush();
-
         }
     }
 }
