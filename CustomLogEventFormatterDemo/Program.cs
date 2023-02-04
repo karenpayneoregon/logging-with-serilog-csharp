@@ -8,11 +8,11 @@ using Spectre.Console;
 
 namespace CustomLogEventFormatterDemo;
 
-public static class Program
+public static partial class Program
 {
-    private const string _connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=Logging;Integrated Security=True;Encrypt=False";
-    private const string _schemaName = "dbo";
-    private const string _tableName = "LogEvents1";
+    private const string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=Logging;Integrated Security=True;Encrypt=False";
+    private const string SchemaName = "dbo";
+    private const string TableName = "LogEvents1";
 
     public static void Main()
     {
@@ -27,11 +27,11 @@ public static class Program
 
         // New MSSqlServerSinkOptions based interface
         Log.Logger = new LoggerConfiguration()
-            .WriteTo.MSSqlServer(_connectionString,
+            .WriteTo.MSSqlServer(ConnectionString,
                 sinkOptions: new MSSqlServerSinkOptions
                 {
-                    TableName = _tableName,
-                    SchemaName = _schemaName,
+                    TableName = TableName,
+                    SchemaName = SchemaName,
                     AutoCreateSqlTable = true,
                     LevelSwitch = levelSwitch
                 },
@@ -61,8 +61,9 @@ public static class Program
 
         Log.CloseAndFlush();
 
+        
         ExitPrompt();
-
+        
     }
 
     private static void UseLevelSwitchToModifyLogLevelDuringRuntime(LoggingLevelSwitch levelSwitch)
@@ -83,18 +84,4 @@ public static class Program
         throw new DivideByZeroException();
     }
 
-    private static void Render(Rule rule)
-    {
-        AnsiConsole.Write(rule);
-        AnsiConsole.WriteLine();
-    }
-
-    private static void ExitPrompt()
-    {
-        Console.WriteLine();
-        Render(new Rule($"[white on blue]Press a key to exit the demo[/]")
-            .RuleStyle(Style.Parse("cyan"))
-            .Centered());
-        Console.ReadLine();
-    }
 }
