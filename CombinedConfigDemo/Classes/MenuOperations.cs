@@ -5,6 +5,23 @@ namespace CombinedConfigDemo.Classes
 {
     class MenuOperations
     {
+        public static void Run()
+        {
+            while (true)
+            {
+                Console.Clear();
+
+                var menuItem = AnsiConsole.Prompt(MenuOperations.SelectionPrompt());
+                if (menuItem.Id != -1)
+                {
+                    menuItem.Action();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
         /// <summary>
         /// Create main menu
         /// </summary>
