@@ -40,10 +40,8 @@ public partial class Context : DbContext
                 ownedNavigationBuilder.ToJson();
             });
 
-
-
-
         OnModelCreatingPartial(modelBuilder);
+
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
