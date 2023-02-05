@@ -23,14 +23,4 @@ One of the columns contains json for the log entry which can be read from EF Cor
 }
 ```
 
-## EF Core
-
-
-
-
-# Notes
-
-- This sample comes from [here](https://github.com/serilog-mssql/serilog-sinks-mssqlserver/tree/dev/sample/CombinedConfigDemo) under 
-Serilog MSSQL [repository](https://github.com/serilog-mssql). Karen Payne change from `netcoreapp3.1` to `net6.0`
-- When considering using a database for logging make sure that the choosen database is up 24x7 else logs may be lost.
 
