@@ -1,0 +1,60 @@
+﻿<!-- ReSharper disable once UnknownProperty -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>disable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="DataScripts\script.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="DataScripts\script.sql" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+		<PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Classes\Controls\DataButton.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="assets\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog" Version="2.12.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+		<PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+	</ItemGroup>
+</Project>
