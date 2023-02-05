@@ -41,6 +41,7 @@ As SeriLog matures there will be some libraries that will become obsolete, they 
 | WriteToNotePadApp | Demonstrates using a third party sink to write logs to notepad |
 | ConditionalLogging | Example to enable/disable logging using appsettings.json and a class for configuring logging |
 | ConditionalLoggingToggle | Helper utility for `ConditionalLogging` with full documentation  |
+| LogForContext | Shows how to log to a file using [source contexts](https://github.com/serilog/serilog/wiki/Writing-Log-Events#source-contexts) |
 
 
 
