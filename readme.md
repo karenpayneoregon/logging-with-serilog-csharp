@@ -39,6 +39,9 @@ As SeriLog matures there will be some libraries that will become obsolete, they 
 | SeriLogLibrary | Class project, currently contains methods to change colors for writing to the console. |
 | WriteSeparateFromEfCore | Demonstrates SeriLog writing to a log and EF Core to a different log|
 | WriteToNotePadApp | Demonstrates using a third party sink to write logs to notepad |
+| ConditionalLogging | Example to enable/disable logging using appsettings.json and a class for configuring logging |
+| ConditionalLoggingToggle | Helper utility for `ConditionalLogging` with full documentation  |
+
 
 
 # Which NuGet packages do I need?
