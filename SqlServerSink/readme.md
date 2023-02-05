@@ -2,6 +2,8 @@
 
 A code sample which writes logs to a Microsoft SQL-Server database via [Serilog.Sinks.MSSqlServer](https://www.nuget.org/packages/Serilog.Sinks.MSSqlServer/5.7.1?_src=template) NuGet package.
 
+![Figure1](assets/figure1.png)
+
 Here is what is logged, in this case informational.
 
 ```
