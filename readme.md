@@ -179,7 +179,9 @@ Serilog provides [sinks](https://github.com/serilog/serilog/wiki/Provided-Sinks)
 - SeriLog [home page](https://serilog.net/)
 - Serilog [Best Practices](https://benfoster.io/blog/serilog-best-practices/) :heavy_check_mark:
 - Seq [log viewer](https://datalust.co/seq)
-- [Customized JSON formatting with Serilog](https://nblumhardt.com/2021/06/customize-serilog-json-output/)
+- [Debugging and Diagnostics](https://github.com/serilog/serilog/wiki/Debugging-and-Diagnostics)
+- [Formatting Output](https://github.com/serilog/serilog/wiki/Formatting-Output)
+    - [Customized JSON formatting with Serilog](https://nblumhardt.com/2021/06/customize-serilog-json-output/)
 
 
 # Closing thoughts

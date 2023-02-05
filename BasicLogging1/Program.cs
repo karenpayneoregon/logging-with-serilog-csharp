@@ -1,6 +1,5 @@
 ﻿using BasicLogging1.Classes;
 using Serilog;
-using Serilog.Sinks.SystemConsole.Themes;
 using Spectre.Console;
 
 namespace BasicLogging1;

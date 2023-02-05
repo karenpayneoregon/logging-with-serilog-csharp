@@ -20,11 +20,6 @@ public class SetupLogging
             .CreateLogger();
     }
 
-    //public static void DevelopmentColored(WebApplicationBuilder builder)
-    //{
-    //    builder.Host.UseSerilog((context, configuration) => configuration.WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information, theme: AnsiConsoleTheme.Literate));
-    //}
-
     public static void DevelopmentAlternate()
     {
         Log.Logger = new LoggerConfiguration()
