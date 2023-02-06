@@ -30,15 +30,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLogEventFormatterDemo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerSink", "SqlServerSink\SqlServerSink.csproj", "{E42012C4-178A-4D03-892C-C2EAA04BB70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalLogging", "ConditionalLogging\ConditionalLogging.csproj", "{B1B76996-944E-4870-A6AF-8FF0E4072533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalLogging", "ConditionalLogging\ConditionalLogging.csproj", "{B1B76996-944E-4870-A6AF-8FF0E4072533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalLoggingToggle", "ConditionalLoggingToggle\ConditionalLoggingToggle.csproj", "{96C2BE92-F0F5-4EC4-801C-33EC9BC73BAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalLoggingToggle", "ConditionalLoggingToggle\ConditionalLoggingToggle.csproj", "{96C2BE92-F0F5-4EC4-801C-33EC9BC73BAF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows forms", "Windows forms", "{2A9A4C72-5FF0-498D-83C6-01FEF3BD9138}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateDynamicControlsCore", "CreateDynamicControlsCore\CreateDynamicControlsCore.csproj", "{7DBB6BD6-F50D-4EDD-9406-CAC5B1C63B13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogForContext", "LogForContext\LogForContext.csproj", "{E3F7689C-6200-463E-8FB3-5F99509D4C37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogForContext", "LogForContext\LogForContext.csproj", "{E3F7689C-6200-463E-8FB3-5F99509D4C37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogCustomLogColors", "SerilogCustomLogColors\SerilogCustomLogColors.csproj", "{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +96,10 @@ Global
 		{E3F7689C-6200-463E-8FB3-5F99509D4C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3F7689C-6200-463E-8FB3-5F99509D4C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3F7689C-6200-463E-8FB3-5F99509D4C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +117,7 @@ Global
 		{96C2BE92-F0F5-4EC4-801C-33EC9BC73BAF} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{7DBB6BD6-F50D-4EDD-9406-CAC5B1C63B13} = {2A9A4C72-5FF0-498D-83C6-01FEF3BD9138}
 		{E3F7689C-6200-463E-8FB3-5F99509D4C37} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
+		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}
