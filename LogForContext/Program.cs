@@ -1,7 +1,5 @@
 ﻿using LogForContext.Classes;
 using LogForContext.Models;
-using Serilog;
-using Serilog.Core;
 
 namespace LogForContext;
 
