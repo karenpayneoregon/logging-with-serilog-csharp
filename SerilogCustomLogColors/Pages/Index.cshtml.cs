@@ -22,14 +22,14 @@ public class IndexModel : PageModel
     }
     public IActionResult OnPostButton1(IFormCollection data)
     {
-        Log.Information($"Entering {nameof(OnPostButton1)}");
+        Log.Information("Entering {method}", nameof(OnPostButton1));
         return new RedirectToPageResult("Index");
     }
 
 
     public IActionResult OnPostButton2(IFormCollection data)
     {
-        Log.Information($"Entering {nameof(OnPostButton2)}");
+        Log.Information("Entering {method}", nameof(OnPostButton2));
         return new RedirectToPageResult("Index");
     }
 
@@ -53,13 +53,17 @@ public class IndexModel : PageModel
         }
         else if (context.HandlerMethod!.MethodInfo.Name == nameof(OnPostButton1))
         {
-            Log.Information($"Entering {nameof(OnPageHandlerSelected)} for {nameof(OnPostButton1)}");
+            
+            Log.Information("Entering {P1} for {P2}",
+                nameof(OnPageHandlerSelected), OnPostButton1);
         }
     }
 
     public override Task OnPageHandlerExecutionAsync(PageHandlerExecutingContext context, PageHandlerExecutionDelegate next)
     {
-        Log.Information($"Entering {nameof(OnPageHandlerExecutionAsync)} for {context.HandlerMethod!.MethodInfo.Name}");
+        Log.Information("Entering {P1}", 
+            nameof(OnPageHandlerExecutionAsync));
+
         return base.OnPageHandlerExecutionAsync(context, next);
     }
 
@@ -67,7 +71,7 @@ public class IndexModel : PageModel
     {
         if (context.HandlerMethod!.MethodInfo.Name == nameof(OnPostButton4))
         {
-            Log.Information("Redirecting");
+            Log.Information("Redirecting to {p1}", "OtherPage");
             context.Result = new RedirectResult("OtherPage");
         }
         base.OnPageHandlerExecuting(context);
