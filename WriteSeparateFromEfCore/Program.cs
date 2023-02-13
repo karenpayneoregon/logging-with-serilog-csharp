@@ -17,13 +17,7 @@ public class Program
         {
 
             SetupLogging.Development();
-
-            //builder.Services.AddDbContextPool<Context>(options =>
-            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-            //        .EnableSensitiveDataLogging()
-            //        .LogTo(new DbContextToFileLogger().Log));
-
-            builder.Services.SensitiveDataLoggingConnection();
+            builder.Services.ProductionLoggingConnection();
         }
 
         var app = builder.Build();

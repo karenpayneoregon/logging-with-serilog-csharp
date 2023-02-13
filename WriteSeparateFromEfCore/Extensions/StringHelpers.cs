@@ -2,6 +2,10 @@
 
 namespace WriteSeparateFromEfCore.Extensions;
 
+/// <summary>
+/// From
+/// https://github.com/karenpayneoregon/auto-incrementing-sequences
+/// </summary>
 public class StringHelpers
 {
     public static string NextValue(string sender)

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using WriteSeparateFromEfCore.Data;
 
 namespace WriteSeparateFromEfCore.Classes;
@@ -38,4 +39,29 @@ public static class DbContexts
                 .LogTo(new DbContextToFileLogger().Log));
     }
 
+    /// <summary>
+    /// Single line logging with sensitive data enabled
+    /// </summary>
+    /// <param name="collection"></param>
+    public static void SingleLineSensitiveDataLoggingConnection(this IServiceCollection collection)
+    {
+        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+        collection.AddDbContextPool<Context>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                .EnableSensitiveDataLogging().LogTo(
+                    new DbContextToFileLogger().Log,
+                    LogLevel.Debug,
+                    DbContextLoggerOptions.DefaultWithLocalTime | DbContextLoggerOptions.SingleLine));
+
+    }
+
+    public static void ProductionLoggingConnection(this IServiceCollection collection)
+    {
+        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+        collection.AddDbContextPool<Context>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                .LogTo(
+                    new DbContextToFileLogger().Log));
+
+    }
 }
