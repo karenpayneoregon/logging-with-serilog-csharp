@@ -20,14 +20,14 @@ public class IndexModel : PageModel
 
     public IActionResult OnPostButton1(IFormCollection data)
     {
-        Log.Information($"Entering {nameof(OnPostButton1)}");
+        Log.Information("Entering {P1}", nameof(OnPostButton1));
         return new RedirectToPageResult("Index");
     }
 
 
     public IActionResult OnPostButton2(IFormCollection data)
     {
-        Log.Information($"Entering {nameof(OnPostButton2)}");
+        Log.Information("Entering {P1}", nameof(OnPostButton2));
         return new RedirectToPageResult("Index");
     }
 

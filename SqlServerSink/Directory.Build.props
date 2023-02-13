@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+		<Version>2.2.5</Version>
+		<Authors>Karen Payne</Authors>
+		<Company>Karen Payne Inc</Company>
+		<Copyright>Copyright © 2023, Karen Payne MVP</Copyright>
+		<Product>ExampleProduct</Product>
+	</PropertyGroup>
+</Project>
