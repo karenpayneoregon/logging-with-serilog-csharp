@@ -7,31 +7,35 @@
 
 
 
-
-<table class="table table-bordered">
-    <thead class="table-primary">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserLogin[0].EmailAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserLogin[0].Pin)
-            </th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.UserLogin)
-        {
+<form method="post">
+    <table class="table table-bordered">
+        <thead class="table-primary">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmailAddress)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pin)
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserLogin[0].EmailAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserLogin[0].Pin)
+                </th>
 
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.UserLogin)
+            {
+                <tr>
+                    <td>
+                        @Html.HiddenFor(modelItem => item.Id)
+                        @Html.DisplayFor(modelItem => item.EmailAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pin)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <input type="submit" value="Test1" class="btn btn-primary" asp-page-handler="Button1" />
+</form>

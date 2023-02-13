@@ -1,4 +1,5 @@
-﻿using static System.DateTime;
+﻿using System.Diagnostics;
+using static System.DateTime;
 
 namespace WriteSeparateFromEfCore.Classes;
 
@@ -36,6 +37,7 @@ public class DbContextToFileLogger
     /// append message to the existing stream
     /// </summary>
     /// <param name="message"></param>
+    [DebuggerStepThrough]
     public void Log(string message)
     {
 

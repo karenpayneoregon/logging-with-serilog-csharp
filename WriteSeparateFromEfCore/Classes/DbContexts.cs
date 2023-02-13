@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WriteSeparateFromEfCore.Data;
 
 namespace WriteSeparateFromEfCore.Classes;
 public static class DbContexts
@@ -23,6 +24,18 @@ public static class DbContexts
         {
             return false; 
         }
+    }
+
+    /// <summary>
+    /// Enable sensitive logging for EF Core
+    /// </summary>
+    public static void SensitiveDataLoggingConnection(this IServiceCollection collection)
+    {
+        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+        collection.AddDbContextPool<Context>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                .EnableSensitiveDataLogging()
+                .LogTo(new DbContextToFileLogger().Log));
     }
 
 }
