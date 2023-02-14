@@ -17,6 +17,11 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 		<PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" Version="34.0.2" />
+	</ItemGroup>
+
 	<ItemGroup>
 	  <ProjectReference Include="..\SeriLogLibrary\SeriLogLibrary.csproj" />
 	</ItemGroup>

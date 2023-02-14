@@ -29,7 +29,11 @@ public class IndexModel : PageModel
 
     public IActionResult OnPostButton2(IFormCollection data)
     {
-        Log.Information("Entering {method}", nameof(OnPostButton2));
+        var list = Operations.GenerateStudents();
+        for (int index = 0; index < list.Count; index++)
+        {
+            Log.Information("First: {P1} Last: {P2} Grade: {P3}", list[index].FirstName, list[index].LastName, list[index].Grade);
+        }
         return new RedirectToPageResult("Index");
     }
 
@@ -45,27 +49,7 @@ public class IndexModel : PageModel
         return new RedirectToPageResult("Index");
     }
     #region handlers 
-    public override void OnPageHandlerSelected(PageHandlerSelectedContext context)
-    {
-        if (context.HandlerMethod!.MethodInfo.Name == nameof(OnGet))
-        {
-            // page
-        }
-        else if (context.HandlerMethod!.MethodInfo.Name == nameof(OnPostButton1))
-        {
-            
-            Log.Information("Entering {P1} for {P2}",
-                nameof(OnPageHandlerSelected), OnPostButton1);
-        }
-    }
 
-    public override Task OnPageHandlerExecutionAsync(PageHandlerExecutingContext context, PageHandlerExecutionDelegate next)
-    {
-        Log.Information("Entering {P1}", 
-            nameof(OnPageHandlerExecutionAsync));
-
-        return base.OnPageHandlerExecutionAsync(context, next);
-    }
 
     public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
     {
