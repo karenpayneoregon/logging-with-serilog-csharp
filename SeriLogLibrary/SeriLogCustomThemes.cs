@@ -2,6 +2,9 @@
 
 namespace SeriLogLibrary;
 
+/// <summary>
+/// Feel free to change the colors
+/// </summary>
 public class SeriLogCustomThemes
 {
     /// <summary>
@@ -38,6 +41,19 @@ public class SeriLogCustomThemes
                     ConsoleThemeStyle.Boolean, new SystemConsoleThemeStyle
                     {
                         Foreground = ConsoleColor.Red,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.LevelInformation, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.DarkCyan,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.SecondaryText, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.White, 
+                        Background = ConsoleColor.DarkBlue,
                     }
                 }
             };
@@ -81,6 +97,12 @@ public class SeriLogCustomThemes
                         Foreground = ConsoleColor.White,
                     }
                 },
+                {
+                    ConsoleThemeStyle.LevelInformation, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.DarkGreen
+                    }
+                }
             };
 
         return new SystemConsoleTheme(customThemeStyles);
