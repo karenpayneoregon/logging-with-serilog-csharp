@@ -1,5 +1,4 @@
 ﻿using Serilog;
-using Serilog.Sinks.SystemConsole.Themes;
 using SeriLogLibrary;
 using static System.DateTime;
 

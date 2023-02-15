@@ -42,6 +42,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogForContext", "LogForCont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogCustomLogColors", "SerilogCustomLogColors\SerilogCustomLogColors.csproj", "{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineArguments", "CommandLineArguments\CommandLineArguments.csproj", "{D313B7AD-A093-4473-8CCE-35959F8AD4BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D313B7AD-A093-4473-8CCE-35959F8AD4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D313B7AD-A093-4473-8CCE-35959F8AD4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D313B7AD-A093-4473-8CCE-35959F8AD4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D313B7AD-A093-4473-8CCE-35959F8AD4BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{7DBB6BD6-F50D-4EDD-9406-CAC5B1C63B13} = {2A9A4C72-5FF0-498D-83C6-01FEF3BD9138}
 		{E3F7689C-6200-463E-8FB3-5F99509D4C37} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
+		{D313B7AD-A093-4473-8CCE-35959F8AD4BB} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}

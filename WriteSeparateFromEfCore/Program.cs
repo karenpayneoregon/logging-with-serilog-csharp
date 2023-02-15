@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore;
 using WriteSeparateFromEfCore.Classes;
-using WriteSeparateFromEfCore.Data;
 
 namespace WriteSeparateFromEfCore;
 
