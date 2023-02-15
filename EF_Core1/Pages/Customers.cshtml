@@ -1,0 +1,43 @@
+﻿@page
+@model EF_Core1.Pages.CustomersModel
+
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Customers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].City)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+ 
+
+            </tr>
+        }
+    </tbody>
+</table>

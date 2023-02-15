@@ -40,7 +40,7 @@ public static class DbContexts
     }
 
     /// <summary>
-    /// Single line logging with sensitive data enabled
+    /// Single line logging with sensitive data enabled for EF Core
     /// </summary>
     /// <param name="collection"></param>
     public static void SingleLineSensitiveDataLoggingConnection(this IServiceCollection collection)
@@ -54,7 +54,10 @@ public static class DbContexts
                     DbContextLoggerOptions.DefaultWithLocalTime | DbContextLoggerOptions.SingleLine));
 
     }
-
+    /// <summary>
+    /// Production logging for EF Core
+    /// </summary>
+    /// <param name="collection"></param>
     public static void ProductionLoggingConnection(this IServiceCollection collection)
     {
         IConfigurationRoot configuration = Configurations.GetConfigurationRoot();

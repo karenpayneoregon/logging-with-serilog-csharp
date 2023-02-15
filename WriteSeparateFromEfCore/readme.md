@@ -2,6 +2,8 @@
 
 This project writes logs to a folder per day under LogFiles folder under the app folder using the following for SeriLog and EF Core under the same folder.
 
+See `EF_Core1` project for plain vanilla logging for EF Core without SeriLog.
+
 ## Setting up SeriLog
 
 ```csharp
