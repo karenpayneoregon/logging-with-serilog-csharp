@@ -19,6 +19,7 @@ Basic EF Core logging done in `appsettings.Development.json`, no SeriLog. See `W
 }
 ```
 
-[Message categories](https://learn.microsoft.com/en-us/ef/core/logging-events-diagnostics/simple-logging#message-categories)
+- [Message categories](https://learn.microsoft.com/en-us/ef/core/logging-events-diagnostics/simple-logging#message-categories)
+- [Log levels](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loglevel?view=dotnet-plat-ext-3.1)
 
 
