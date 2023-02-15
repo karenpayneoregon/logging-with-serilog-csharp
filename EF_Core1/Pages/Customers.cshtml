@@ -1,13 +1,14 @@
 ﻿@page
+@using EF_Core1.Classes
 @model EF_Core1.Pages.CustomersModel
 
 @{
     ViewData["Title"] = "Customers";
 }
 
-<h1>Customers</h1>
 
-<table class="table">
+
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
@@ -23,21 +24,31 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Customers)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CompanyName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Street)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
- 
+        @{
+            @foreach (var item in Model.Customers)
+            {
 
-            </tr>
+                <tr>
+                    <td>
+                        @if (item.CustomerIdentifier.IsEven())
+                        {
+                            <span class="fw-bold">@Html.DisplayFor(modelItem => item.CompanyName)</span>
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.CompanyName)
+                        }
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Street)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                </tr>
+            }
         }
+
     </tbody>
 </table>

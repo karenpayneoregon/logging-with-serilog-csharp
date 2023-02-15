@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EF_Core1.Models;
 
@@ -11,7 +12,7 @@ public partial class Customers
     /// Primary key
     /// </summary>
     public int CustomerIdentifier { get; set; }
-
+    [Display(Name = "Name")]
     public string CompanyName { get; set; }
 
     public int? ContactId { get; set; }
