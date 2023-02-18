@@ -12,6 +12,9 @@ public class IndexModel : PageModel
     }
 
 
-    public IActionResult OnGet() => new RedirectToPageResult("/Customers");
-
+    public IActionResult OnGet()
+    {
+        _logger.LogInformation("Redirecting from {P1}", "Index");
+        return new RedirectToPageResult("/Customers");
+    }
 }

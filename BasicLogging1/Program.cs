@@ -30,7 +30,7 @@ internal partial class Program
 
   
         Person person = new() { Id = 1, FirstName = "Karen", LastName = "Payne"};
-        Log.Information("Processed {@Person}", person);
+        Log.Information("Processed {Person}", person);
         Log.Information("Bye, Serilog!");
         ExitPrompt();
         Console.ReadLine();

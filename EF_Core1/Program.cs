@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using EF_Core1.Classes;
 using EF_Core1.Data;
 using Microsoft.EntityFrameworkCore;

@@ -7,10 +7,11 @@ namespace EF_Core1.Pages;
 public class CustomersModel : PageModel
 {
     private readonly Data.Context _context;
-
-    public CustomersModel(Data.Context context)
+    private readonly ILogger<IndexModel> _logger;
+    public CustomersModel(ILogger<IndexModel> logger, Data.Context context)
     {
         _context = context;
+        _logger = logger;
     }
 
     public IList<Customers> Customers { get;set; } = default!;
