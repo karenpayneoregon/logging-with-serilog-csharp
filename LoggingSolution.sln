@@ -42,11 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogForContext", "LogForCont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogCustomLogColors", "SerilogCustomLogColors\SerilogCustomLogColors.csproj", "{6EFBBA7C-49A2-4409-A49E-E12074FAF4ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineArguments", "CommandLineArguments\CommandLineArguments.csproj", "{D313B7AD-A093-4473-8CCE-35959F8AD4BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineArguments", "CommandLineArguments\CommandLineArguments.csproj", "{D313B7AD-A093-4473-8CCE-35959F8AD4BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Core", "EF Core", "{18C7BF46-34D6-4735-8C96-DB55E58F2797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core1", "EF_Core1\EF_Core1.csproj", "{5AB7C978-E50F-42D7-9648-B3251AD3A620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core1", "EF_Core1\EF_Core1.csproj", "{5AB7C978-E50F-42D7-9648-B3251AD3A620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
