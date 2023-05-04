@@ -12,9 +12,10 @@ public class Program
 
         builder.Services.AddRazorPages();
 
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
         builder.Services.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(
+                Configurations.GetConfigurationRoot()
+                    .GetConnectionString("DefaultConnection")));
 
         var app = builder.Build();
 
