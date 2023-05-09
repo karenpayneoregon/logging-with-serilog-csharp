@@ -13,6 +13,7 @@ public class CustomersModel : PageModel
     {
         _context = context;
         _logger = logger;
+        var test = logger.GetType();
     }
 
     public IList<Customers> Customers { get;set; } = default!;

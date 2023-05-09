@@ -12,7 +12,7 @@ internal partial class Program
         Console.WriteLine();
 
 
-        SetupLogging.Development();
+        SetupLogging.Production();
 
         AnsiConsole.MarkupLine("[cyan]Simple logging[/]");
         Console.WriteLine();
