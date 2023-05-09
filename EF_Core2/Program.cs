@@ -38,9 +38,7 @@ public class Program
         builder.Services.AddDbContextPool<Context>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging()
-                .LogTo(message => Debug.WriteLine(message),
-                    LogLevel.Information,
-                    DbContextLoggerOptions.UtcTime));
+                .LogTo(new DbContextLogger().Log, (id, _) => id == RelationalEventId.CommandExecuting));
 
 
 
