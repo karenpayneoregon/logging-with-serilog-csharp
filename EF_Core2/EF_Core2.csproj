@@ -7,11 +7,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="readme.md" />
+		<None Remove="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="readme.md" />
+	  <_ContentIncludedByDefault Remove="Stash\Empty1.json" />
+	  <_ContentIncludedByDefault Remove="Stash\Empty2.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
@@ -31,6 +36,9 @@
 		<PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Stash\" />
 	</ItemGroup>
 
 

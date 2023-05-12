@@ -11,7 +11,7 @@ public class IndexModel : PageModel
     public IndexModel(Context context)
     {
         _context = context;
-        SetupLogging.CreateLogger();
+        
     }
 
     public void OnGet()

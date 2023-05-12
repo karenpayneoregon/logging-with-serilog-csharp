@@ -20,16 +20,14 @@ public class Program
         builder.Configuration.AddCommandLine(args);
 
         // Configure Serilog
-        builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
-            loggerConfiguration
-                .ReadFrom.Configuration(hostingContext.Configuration)
-        );
+        //builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
+        //    loggerConfiguration
+        //        .ReadFrom.Configuration(hostingContext.Configuration)
+        //);
         
         // Add services to the container.
         builder.Services.AddRazorPages();
-
         
-
         IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json")
@@ -39,15 +37,20 @@ public class Program
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging()
                 .LogTo(new DbContextLogger().Log, (id, _) => id == RelationalEventId.CommandExecuting));
-
-
-
+        
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
         {
+            // Configure Serilog
+            SetupLogging.Production();
             app.UseExceptionHandler("/Error");
             app.UseHsts();
+        }
+        else
+        {
+            // Configure Serilog
+            SetupLogging.Development();
         }
 
         app.UseHttpsRedirection();
