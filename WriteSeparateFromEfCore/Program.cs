@@ -10,17 +10,16 @@ public class Program
         
         builder.Services.AddRazorPages();
 
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
         if (builder.Environment.IsDevelopment())
         {
 
             SetupLogging.Development();
-            builder.Services.SensitiveDataLoggingConnection();
+            builder.Services.SensitiveDataLoggingConnection(builder);
         }
         else
         {
             SetupLogging.Production();
-            builder.Services.ProductionLoggingConnection();
+            builder.Services.ProductionLoggingConnection(builder);
         }
 
         var app = builder.Build();

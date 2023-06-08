@@ -30,11 +30,11 @@ public static class DbContexts
     /// <summary>
     /// Enable sensitive logging for EF Core
     /// </summary>
-    public static void SensitiveDataLoggingConnection(this IServiceCollection collection)
+    public static void SensitiveDataLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
     {
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+
         collection.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging()
                 .LogTo(new DbContextToFileLogger().Log));
     }
@@ -42,12 +42,11 @@ public static class DbContexts
     /// <summary>
     /// Single line logging with sensitive data enabled for EF Core
     /// </summary>
-    /// <param name="collection"></param>
-    public static void SingleLineSensitiveDataLoggingConnection(this IServiceCollection collection)
+    public static void SingleLineSensitiveDataLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
     {
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+
         collection.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging().LogTo(
                     new DbContextToFileLogger().Log,
                     LogLevel.Debug,
@@ -58,11 +57,11 @@ public static class DbContexts
     /// Production logging for EF Core
     /// </summary>
     /// <param name="collection"></param>
-    public static void ProductionLoggingConnection(this IServiceCollection collection)
+    public static void ProductionLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
     {
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+        
         collection.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .LogTo(
                     new DbContextToFileLogger().Log));
 

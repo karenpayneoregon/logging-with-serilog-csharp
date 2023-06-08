@@ -14,8 +14,12 @@ namespace WriteSeparateFromEfCore.Classes;
 /// </summary>
 public class DbContextToFileLogger
 {
+    /// <summary>
+    /// Log file name
+    /// </summary>
     private readonly string _fileName = 
-        Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LogFiles", $"{Now.Year}-{Now.Month}-{Now.Day}", $"EF_Log.txt");
+        Path.Combine(AppDomain.CurrentDomain.BaseDirectory, 
+            "LogFiles", $"{Now.Year}-{Now.Month}-{Now.Day}", $"EF_Log.txt");
 
     /// <summary>
     /// Use to override log file name and path

@@ -12,7 +12,10 @@ public class SetupLogging
     /// </summary>
     public static void Development()
     {
-        IConfigurationRoot configuration = Configurations.GetConfigurationRoot();
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
 
 
         if (Convert.ToBoolean(configuration.GetSection("Debug")["LogSqlCommand"]))

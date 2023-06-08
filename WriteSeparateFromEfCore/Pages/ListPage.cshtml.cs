@@ -14,15 +14,18 @@ public class ListPageModel : PageModel
 
     public ListPageModel(Data.Context context)
     {
+
         _context = context;
         CancellationTokenSource cancellationTokenSource = new(TimeSpan.FromSeconds(1));
 
         var success = context.CanConnectAsync(cancellationTokenSource.Token);
+
         if (success == false)
         {
             _context.Database.EnsureDeleted();
             _context.Database.EnsureCreated();
         }
+
     }
 
     [BindProperty]
@@ -38,10 +41,10 @@ public class ListPageModel : PageModel
 
     public IActionResult OnPostButton1(IFormCollection data)
     {
-        Random rnd = new Random();
+        Random rnd = new();
         int id = rnd.Next(1, Request.Form["item.id"].Select(x => Convert.ToInt32(x)).LastOrDefault());
 
-        var user = _context.UserLogin.FirstOrDefault(x => x.Id == id);
+        var user = _context.UserLogin.FirstOrDefault(ul => ul.Id == id);
         if (user is not null)
         {
             Log.Information("Updating user id: {ID} with current pin: {Pin}", id, user.Pin);

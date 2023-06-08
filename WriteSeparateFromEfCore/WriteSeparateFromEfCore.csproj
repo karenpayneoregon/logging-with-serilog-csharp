@@ -24,8 +24,6 @@
 
 	<ItemGroup>
 
-		<PackageReference Include="ConfigurationLibrary" Version="1.0.4" />
-
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -56,4 +54,5 @@
 	<Target Name="MakeMyDir" AfterTargets="Build">
 		<MakeDir Directories="$(OutDir)LogFiles" />
 	</Target>
+
 </Project>
