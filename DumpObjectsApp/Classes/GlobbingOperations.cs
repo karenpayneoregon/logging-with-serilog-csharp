@@ -18,7 +18,7 @@ internal class GlobbingOperations
     /// Indicates processing has completed
     /// </summary>
     public static event OnDone Done;
-    public static async Task Asynchronous(string parentFolder, string[] patterns, string[] excludePatterns)
+    public static async Task ProcessFolder(string parentFolder, string[] patterns, string[] excludePatterns)
     {
 
         Matcher matcher = new();

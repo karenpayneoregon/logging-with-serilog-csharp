@@ -31,7 +31,7 @@ internal partial class Program
             "**/TemporaryGeneratedFile*.cs"
         };
 
-        return GlobbingOperations.Asynchronous(path, include, exclude);
+        return GlobbingOperations.ProcessFolder(path, include, exclude);
     }
 
     private static void GlobbingOperations_Done(string message)
