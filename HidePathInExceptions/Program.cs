@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using HidePathInExceptions.Classes;
 using Serilog.Events;
@@ -9,6 +10,17 @@ internal partial class Program
 {
     static async Task Main(string[] args)
     {
+        Console.WriteLine();
+
+        try
+        {
+            await File.ReadAllLinesAsync("SomeFile.txt");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+   
+        }
         await Task.Delay(0);
 
         try

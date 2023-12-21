@@ -14,8 +14,7 @@ public class Program
 
         builder.Services.AddDbContextPool<Context>(options =>
             options.UseSqlServer(
-                Configurations.GetConfigurationRoot()
-                    .GetConnectionString("DefaultConnection")));
+                builder.Configuration.GetConnectionString("DefaultConnection")));
 
         var app = builder.Build();
 

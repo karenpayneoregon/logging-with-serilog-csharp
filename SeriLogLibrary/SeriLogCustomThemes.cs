@@ -76,13 +76,53 @@ public class SeriLogCustomThemes
                 {
                     ConsoleThemeStyle.Text, new SystemConsoleThemeStyle
                     {
-                        Foreground = ConsoleColor.Green,
+                        Foreground = ConsoleColor.Blue,
                     }
                 },
                 {
                     ConsoleThemeStyle.String, new SystemConsoleThemeStyle
                     {
                         Foreground = ConsoleColor.Yellow,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.Number, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.Cyan,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.Boolean, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.White,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.LevelInformation, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.DarkGreen
+                    }
+                }
+            };
+
+        return new SystemConsoleTheme(customThemeStyles);
+
+    }
+    public static SystemConsoleTheme JsonTheme()
+    {
+        Dictionary<ConsoleThemeStyle, SystemConsoleThemeStyle> customThemeStyles =
+            new()
+            {
+                {
+                    ConsoleThemeStyle.Text, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.Green,
+                    }
+                },
+                {
+                    ConsoleThemeStyle.String, new SystemConsoleThemeStyle
+                    {
+                        Foreground = ConsoleColor.DarkCyan,
                     }
                 },
                 {
