@@ -36,18 +36,6 @@ public partial class Form1 : Form
 
 
 
-        string lines = 
-            """
-            Karen,Payne
-            Mike,Jones
-            """;
-
-        var results1 = lines.ReplaceLineEndings("\n");
-
-
-        var results2 = lines.Replace("\r\n", "\n").Replace("\r", "\n");
-
-
 
     }
 }
