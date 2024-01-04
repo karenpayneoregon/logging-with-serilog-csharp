@@ -22,10 +22,7 @@ public partial class Form1 : Form
         Operations.BuildButtons();
     }
 
-    private void Form1_Load(object sender, EventArgs e)
-    {
 
-    }
     private void ProductsListBoxOnDoubleClick(object sender, EventArgs e)
     {
         if (_productBindingSource.Current is null)

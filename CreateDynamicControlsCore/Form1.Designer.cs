@@ -28,31 +28,28 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.ProductsListBox = new System.Windows.Forms.ListBox();
-            this.SuspendLayout();
-            // 
-            // ProductsListBox
-            // 
-            this.ProductsListBox.FormattingEnabled = true;
-            this.ProductsListBox.ItemHeight = 20;
-            this.ProductsListBox.Location = new System.Drawing.Point(183, 21);
-            this.ProductsListBox.Name = "ProductsListBox";
-            this.ProductsListBox.Size = new System.Drawing.Size(258, 324);
-            this.ProductsListBox.TabIndex = 0;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 391);
-            this.Controls.Add(this.ProductsListBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Create buttons Core version";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
+        ProductsListBox = new ListBox();
+        SuspendLayout();
+        // 
+        // ProductsListBox
+        // 
+        ProductsListBox.FormattingEnabled = true;
+        ProductsListBox.Location = new Point(183, 21);
+        ProductsListBox.Name = "ProductsListBox";
+        ProductsListBox.Size = new Size(258, 364);
+        ProductsListBox.TabIndex = 0;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(459, 421);
+        Controls.Add(ProductsListBox);
+        FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Create buttons Core version";
+        ResumeLayout(false);
     }
 
     #endregion

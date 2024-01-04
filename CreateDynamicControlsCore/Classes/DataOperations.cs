@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using CreateDynamicControlsCore.Classes.Containers;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
 using Log = Serilog.Log;
@@ -19,18 +20,12 @@ namespace CreateDynamicControlsCore.Classes
             try
             {
                 using var cn = new SqlConnection() { ConnectionString = ConnectionString() };
-                var selectStatement = "SELECT CategoryID, CategoryName FROM dbo.Categories WHERE CategoryID <9;";
-
-                using var cmd = new SqlCommand() { Connection = cn, CommandText = selectStatement };
-
-                cn.Open();
-
-                var reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    list.Add(new Category() { Id = reader.GetInt32(0), Name = reader.GetString(1) });
-                }
+                var selectStatement = 
+                    """
+                    SELECT CategoryID as Id, CategoryName as Name 
+                    FROM dbo.Categories 
+                    """;
+                list = cn.Query<Category>(selectStatement).ToList();
             }
             catch (Exception exception)
             {
@@ -50,25 +45,15 @@ namespace CreateDynamicControlsCore.Classes
         /// <returns>list of products for category</returns>
         public static List<Product> ReadProducts(int identifier)
         {
-            var list = new List<Product>();
-
             using var cn = new SqlConnection() { ConnectionString = ConnectionString() };
-            var selectStatement = "SELECT ProductID, ProductName FROM dbo.Products WHERE CategoryID = @Id ORDER BY ProductName";
+            var selectStatement = 
+                """
+                SELECT ProductID as Id, ProductName as Name 
+                FROM dbo.Products WHERE CategoryID = @Id 
+                ORDER BY ProductName
+                """;
+            return cn.Query<Product>(selectStatement, new { Id = identifier }).ToList();
 
-            using var cmd = new SqlCommand() { Connection = cn, CommandText = selectStatement };
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = identifier;
-
-            cn.Open();
-
-            var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                list.Add(new Product() { Id = reader.GetInt32(0), Name = reader.GetString(1) });
-            }
-
-            return list;
-            
         }
     }
 }

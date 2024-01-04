@@ -22,12 +22,32 @@ public partial class Form1 : Form
         }
         catch (Exception exception)
         {
-            Log.Error(exception,"Whatever");
+            Log.Error(exception, "Whatever");
         }
     }
 
     private void WarningButton_Click(object sender, EventArgs e)
     {
         Log.Warning("Some warning");
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+
+
+
+        string lines = 
+            """
+            Karen,Payne
+            Mike,Jones
+            """;
+
+        var results1 = lines.ReplaceLineEndings("\n");
+
+
+        var results2 = lines.Replace("\r\n", "\n").Replace("\r", "\n");
+
+
+
     }
 }

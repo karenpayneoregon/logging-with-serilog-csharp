@@ -28,55 +28,66 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.InformationButton = new System.Windows.Forms.Button();
-            this.ExceptionButton = new System.Windows.Forms.Button();
-            this.WarningButton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // InformationButton
-            // 
-            this.InformationButton.Location = new System.Drawing.Point(47, 38);
-            this.InformationButton.Name = "InformationButton";
-            this.InformationButton.Size = new System.Drawing.Size(227, 29);
-            this.InformationButton.TabIndex = 0;
-            this.InformationButton.Text = "Information";
-            this.InformationButton.UseVisualStyleBackColor = true;
-            this.InformationButton.Click += new System.EventHandler(this.InformationButton_Click);
-            // 
-            // ExceptionButton
-            // 
-            this.ExceptionButton.Location = new System.Drawing.Point(47, 101);
-            this.ExceptionButton.Name = "ExceptionButton";
-            this.ExceptionButton.Size = new System.Drawing.Size(227, 29);
-            this.ExceptionButton.TabIndex = 1;
-            this.ExceptionButton.Text = "Exception";
-            this.ExceptionButton.UseVisualStyleBackColor = true;
-            this.ExceptionButton.Click += new System.EventHandler(this.ExceptionButton_Click);
-            // 
-            // WarningButton
-            // 
-            this.WarningButton.Location = new System.Drawing.Point(47, 157);
-            this.WarningButton.Name = "WarningButton";
-            this.WarningButton.Size = new System.Drawing.Size(227, 29);
-            this.WarningButton.TabIndex = 2;
-            this.WarningButton.Text = "Warning";
-            this.WarningButton.UseVisualStyleBackColor = true;
-            this.WarningButton.Click += new System.EventHandler(this.WarningButton_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 256);
-            this.Controls.Add(this.WarningButton);
-            this.Controls.Add(this.ExceptionButton);
-            this.Controls.Add(this.InformationButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Logging";
-            this.ResumeLayout(false);
-
+        InformationButton = new Button();
+        ExceptionButton = new Button();
+        WarningButton = new Button();
+        button1 = new Button();
+        SuspendLayout();
+        // 
+        // InformationButton
+        // 
+        InformationButton.Location = new Point(47, 38);
+        InformationButton.Name = "InformationButton";
+        InformationButton.Size = new Size(227, 29);
+        InformationButton.TabIndex = 0;
+        InformationButton.Text = "Information";
+        InformationButton.UseVisualStyleBackColor = true;
+        InformationButton.Click += InformationButton_Click;
+        // 
+        // ExceptionButton
+        // 
+        ExceptionButton.Location = new Point(47, 101);
+        ExceptionButton.Name = "ExceptionButton";
+        ExceptionButton.Size = new Size(227, 29);
+        ExceptionButton.TabIndex = 1;
+        ExceptionButton.Text = "Exception";
+        ExceptionButton.UseVisualStyleBackColor = true;
+        ExceptionButton.Click += ExceptionButton_Click;
+        // 
+        // WarningButton
+        // 
+        WarningButton.Location = new Point(47, 157);
+        WarningButton.Name = "WarningButton";
+        WarningButton.Size = new Size(227, 29);
+        WarningButton.TabIndex = 2;
+        WarningButton.Text = "Warning";
+        WarningButton.UseVisualStyleBackColor = true;
+        WarningButton.Click += WarningButton_Click;
+        // 
+        // button1
+        // 
+        button1.Location = new Point(47, 201);
+        button1.Name = "button1";
+        button1.Size = new Size(94, 29);
+        button1.TabIndex = 3;
+        button1.Text = "button1";
+        button1.UseVisualStyleBackColor = true;
+        button1.Click += button1_Click;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(343, 256);
+        Controls.Add(button1);
+        Controls.Add(WarningButton);
+        Controls.Add(ExceptionButton);
+        Controls.Add(InformationButton);
+        FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Logging";
+        ResumeLayout(false);
     }
 
     #endregion
@@ -84,4 +95,5 @@ partial class Form1
     private Button InformationButton;
     private Button ExceptionButton;
     private Button WarningButton;
+    private Button button1;
 }

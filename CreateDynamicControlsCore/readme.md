@@ -29,8 +29,3 @@ Log.Error(exception.Message);
 ## One step farther
 
 Look at [Serilog.Exceptions](https://www.nuget.org/packages?q=Serilog.Exceptions) packages for more on working with runtime exceptions
-
-
-## This project origins
-
-Part of a collection of Windows Forms found [here](https://github.com/karenpayneoregon/windows-forms-samples).

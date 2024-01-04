@@ -31,7 +31,7 @@
 	<ItemGroup>
 		<PackageReference Include="Serilog" Version="2.12.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+		<!--<PackageReference Include="Spectre.Console" Version="0.44.0" />-->
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\SeriLogLibrary\SeriLogLibrary.csproj" />
