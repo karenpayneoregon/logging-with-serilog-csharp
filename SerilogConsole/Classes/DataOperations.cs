@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace SerilogConsole.Classes;
@@ -17,15 +17,21 @@ internal class DataOperations
             WHERE db.database_id > 5
             ORDER BY [Database Name];
             """;
+
         using var cn = new SqlConnection(ConnectionString());
         using var cmd = new SqlCommand(statement, cn);
+
         cn.Open();
+
         AnsiConsole.MarkupLine("[yellow]Connection open[/]");
+
         var reader = cmd.ExecuteReader();
+
         while (reader.Read())
         {
             Console.WriteLine(reader.GetString(0));
         }
+
         AnsiConsole.MarkupLine("[yellow]Done data operations[/]");
     }
 }
