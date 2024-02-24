@@ -4,18 +4,18 @@ namespace EF_Core2.Classes;
 /// <summary>
 /// For logging messages from DbContext.
 /// </summary>
-public class DbContextLogger
+public class DbContextToFileLogger
 {
     private readonly string _fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LogFiles",
         $"{Now.Year}-{Now.Month}-{Now.Day}", "EF-Log.txt");
 
 
-    public DbContextLogger(string fileName)
+    public DbContextToFileLogger(string fileName)
     {
         _fileName = fileName;
     }
 
-    public DbContextLogger()
+    public DbContextToFileLogger()
     {
             
     }
