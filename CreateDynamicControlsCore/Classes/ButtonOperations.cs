@@ -3,7 +3,7 @@ using Serilog;
 
 namespace CreateDynamicControlsCore.Classes;
 
-public class Operations
+public static class ButtonOperations
 {
     public static List<DataButton> ButtonsList { get; set; }
     public static int Top { get; set; }
@@ -18,25 +18,25 @@ public class Operations
     /// <summary>
     /// Initialize global properties
     /// </summary>
-    /// <param name="pControl">Control to place button</param>
-    /// <param name="pTop">Top</param>
-    /// <param name="pBaseHeightPadding">Padding between buttons</param>
-    /// <param name="pLeft">Left position</param>
-    /// <param name="pWidth">Width of button</param>
-    /// <param name="pButtonClick">Click event for button</param>
-    public static void Initialize(Control pControl, int pTop, int pBaseHeightPadding, int pLeft, int pWidth, EventHandler pButtonClick)
+    /// <param name="control">Control to place button</param>
+    /// <param name="top">Top</param>
+    /// <param name="baseHeightPadding">Padding between buttons</param>
+    /// <param name="left">Left position</param>
+    /// <param name="width">Width of button</param>
+    /// <param name="buttonClick">Click event for button</param>
+    public static void Initialize(this Control control, int top, int baseHeightPadding, int left, int width, EventHandler buttonClick)
     {
 
-        ParentControl = pControl;
-        Top = pTop;
-        HeightPadding = pBaseHeightPadding;
-        Left = pLeft;
-        Width = pWidth;
-        EventHandler = pButtonClick;
+        ParentControl = control;
+        Top = top;
+        HeightPadding = baseHeightPadding;
+        Left = left;
+        Width = width;
+        EventHandler = buttonClick;
         ButtonsList = new List<DataButton>();
 
-        var methodName = $"{nameof(Operations)}.{nameof(Initialize)}";
-        Log.Information("{Caller} Top: {Top} Left: {Left}", methodName, pTop, pLeft);
+        var methodName = $"{nameof(ButtonOperations)}.{nameof(Initialize)}";
+        Log.Information("{Caller} Top: {Top} Left: {Left}", methodName, top, left);
             
     }
 
@@ -59,7 +59,7 @@ public class Operations
 
         button.Click += EventHandler;
 
-        var methodName = $"{nameof(Operations)}.{nameof(CreateCategoryButton)}";
+        var methodName = $"{nameof(ButtonOperations)}.{nameof(CreateCategoryButton)}";
         Log.Information("{Caller} Name: {Name} CategoryId: {CategoryId} Location {Left},{Right}", 
             methodName, button.Name, categoryIdentifier, Left, Top);
 

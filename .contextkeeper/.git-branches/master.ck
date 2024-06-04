@@ -15,6 +15,100 @@
         {
           "Documents": [
             {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Properties\\Resources.resx",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Properties\\Resources.resx",
+              "FullName": "Resources.resx",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\CreateDynamicControlsCore.csproj",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\CreateDynamicControlsCore.csproj",
+              "FullName": "CreateDynamicControlsCore.csproj",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Form1.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Form1.cs",
+              "FullName": "Form1.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 44,
+              "Column": 49,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\CreateDynamicControlsCore.csproj",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\CreateDynamicControlsCore.csproj",
+              "FullName": "CreateDynamicControlsCore.csproj",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Classes\\Containers\\Product.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Classes\\Containers\\Product.cs",
+              "FullName": "Product.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Classes\\DataOperations.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Classes\\DataOperations.cs",
+              "FullName": "DataOperations.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 38,
+              "Column": 13,
+              "IsPinned": false
+            },
+            {
               "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\ConditionalLogging\\ConditionalLogging.csproj",
               "RelativePath": "..\\..\\ConditionalLogging\\ConditionalLogging.csproj",
               "FullName": "ConditionalLogging.csproj",
@@ -28,8 +122,103 @@
               },
               "Line": 35,
               "Column": 33,
-              "IsPinned": false,
-              "IsSelected": true
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\Pages\\Index.cshtml.cs",
+              "RelativePath": "..\\..\\DependencyInjectionApp\\Pages\\Index.cshtml.cs",
+              "FullName": "Index.cshtml.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 14,
+              "Column": 25,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\Program.cs",
+              "RelativePath": "..\\..\\DependencyInjectionApp\\Program.cs",
+              "FullName": "Program.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 15,
+              "Column": 13,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Classes\\ButtonOperations.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Classes\\ButtonOperations.cs",
+              "FullName": "ButtonOperations.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 6,
+              "Column": 37,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\WriteToNotePadApp\\Program.cs",
+              "RelativePath": "..\\..\\WriteToNotePadApp\\Program.cs",
+              "FullName": "Program.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 31,
+              "Column": 10,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Classes\\SetupLogging.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Classes\\SetupLogging.cs",
+              "FullName": "SetupLogging.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 15,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\CreateDynamicControlsCore\\Classes\\Containers\\Category.cs",
+              "RelativePath": "..\\..\\CreateDynamicControlsCore\\Classes\\Containers\\Category.cs",
+              "FullName": "Category.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 4,
+              "IsPinned": false
             },
             {
               "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\ConditionalLogging\\Classes\\SetupLogging.cs",
@@ -112,22 +301,6 @@
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\Pages\\Index.cshtml.cs",
-              "RelativePath": "..\\..\\DependencyInjectionApp\\Pages\\Index.cshtml.cs",
-              "FullName": "Index.cshtml.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 162
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 14,
-              "Column": 25,
-              "IsPinned": false
-            },
-            {
               "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\WriteSeparateFromEfCore\\Pages\\Index.cshtml.cs",
               "RelativePath": "..\\..\\WriteSeparateFromEfCore\\Pages\\Index.cshtml.cs",
               "FullName": "Index.cshtml.cs",
@@ -144,22 +317,6 @@
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\Program.cs",
-              "RelativePath": "..\\..\\DependencyInjectionApp\\Program.cs",
-              "FullName": "Program.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 162
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 15,
-              "Column": 13,
-              "IsPinned": false
-            },
-            {
               "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\DependencyInjectionApp.csproj",
               "RelativePath": "..\\..\\DependencyInjectionApp\\DependencyInjectionApp.csproj",
               "FullName": "DependencyInjectionApp.csproj",
@@ -171,6 +328,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
+              "Line": 4,
+              "Column": 30,
               "IsPinned": false
             },
             {
@@ -217,6 +376,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
+              "Line": 6,
+              "Column": 30,
               "IsPinned": false
             },
             {
@@ -247,6 +408,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
+              "Line": 33,
+              "Column": 1,
               "IsPinned": false
             },
             {
@@ -279,6 +442,22 @@
               },
               "Line": 2,
               "Column": 30,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\LoggingSolution\\DependencyInjectionApp\\Pages\\Error.cshtml.cs",
+              "RelativePath": "..\\..\\DependencyInjectionApp\\Pages\\Error.cshtml.cs",
+              "FullName": "Error.cshtml.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 18,
+              "Column": 26,
               "IsPinned": false
             }
           ],

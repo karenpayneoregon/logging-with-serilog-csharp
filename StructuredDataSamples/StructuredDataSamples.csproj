@@ -1,21 +1,13 @@
-﻿<!--EXTERNAL_PROPERTIES: MSBuildThisFileDirectory-->
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net8.0</TargetFramework>
-		<ImplicitUsings>disable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-		<ApplicationIcon>assets\csharp.ico</ApplicationIcon>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="assets\csharp.ico" />
 	  <None Remove="readme.md" />
 	</ItemGroup>
 
@@ -25,23 +17,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+		<PackageReference Include="Bogus" Version="35.5.1" />
+		<PackageReference Include="ConfigurationLibrary" Version="1.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
 		<PackageReference Include="Serilog" Version="4.0.0" />
 		<PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.2" />
 		<PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.46.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageVersion Include="Microsoft.Data.SqlClient" Version="5.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Update="Serilog-disabled.json">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="Serilog.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Diagnostics;
 using CreateDynamicControlsCore.Classes;
 using CreateDynamicControlsCore.Classes.Containers;
 using CreateDynamicControlsCore.Classes.Controls;
@@ -8,44 +9,61 @@ namespace CreateDynamicControlsCore;
 
 public partial class Form1 : Form
 {
-    private BindingList<Product> _productsBindingList;
-    private readonly BindingSource _productBindingSource = new ();
+    private BindingList<Product> productsBindingList;
+    private readonly BindingSource productBindingSource = new ();
     public Form1()
     {
         InitializeComponent();
 
-        Operations.BaseName = "CategoryButton";
+        ButtonOperations.BaseName = "CategoryButton";
 
-        Operations.Initialize(this, 20, 42, 10, 150, CategoryButtonClick);
+        this.Initialize(20, 42, 10, 150, CategoryButtonClick);
 
         ProductsListBox.DoubleClick += ProductsListBoxOnDoubleClick;
-        Operations.BuildButtons();
+        ButtonOperations.BuildButtons();
     }
 
-
-    private void ProductsListBoxOnDoubleClick(object sender, EventArgs e)
+    private void ProductsListBox_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (_productBindingSource.Current is null)
+        DisplayCurrentProduct();
+    }
+
+    private void DisplayCurrentProduct()
+    {
+        if (productBindingSource.Current is null)
         {
             return;
         }
 
-        var product = (Product)_productBindingSource.Current;
+        var product = productsBindingList[productBindingSource.Position];
+        CurrentProductTextBox.Text = $"{product.Id}, {product.Name}";
+    }
+
+    private void ProductsListBoxOnDoubleClick(object sender, EventArgs e)
+    {
+        if (productBindingSource.Current is null)
+        {
+            return;
+        }
+
+        var product = productsBindingList[productBindingSource.Position];
 
         MessageBox.Show($"{product.Id}, {product.Name}");
     }
 
     private void CategoryButtonClick(object sender, EventArgs e)
     {
-        Operations.ButtonsList.ForEach(b => b.Image = null);
+        ButtonOperations.ButtonsList.ForEach(b => b.Image = null);
 
         var button = (DataButton)sender;
 
-        button.Image = Resources.CheckDot_6x_16x;
-
-        _productsBindingList = new BindingList<Product>(DataOperations.ReadProducts(button.Identifier));
-        _productBindingSource.DataSource = _productsBindingList;
-        ProductsListBox.DataSource = _productBindingSource;
+        button.Image = Resources.rightArrow24;
+        ProductsListBox.SelectedIndexChanged -= ProductsListBox_SelectedIndexChanged;
+        productsBindingList = new BindingList<Product>(DataOperations.ReadProducts(button.Identifier));
+        productBindingSource.DataSource = productsBindingList;
+        ProductsListBox.DataSource = productBindingSource;
+        ProductsListBox.SelectedIndexChanged += ProductsListBox_SelectedIndexChanged;
+        DisplayCurrentProduct();
 
     }
 

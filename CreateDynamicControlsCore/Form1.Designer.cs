@@ -29,6 +29,7 @@ partial class Form1
     private void InitializeComponent()
     {
         ProductsListBox = new ListBox();
+        CurrentProductTextBox = new TextBox();
         SuspendLayout();
         // 
         // ProductsListBox
@@ -39,20 +40,30 @@ partial class Form1
         ProductsListBox.Size = new Size(258, 364);
         ProductsListBox.TabIndex = 0;
         // 
+        // CurrentProductTextBox
+        // 
+        CurrentProductTextBox.Location = new Point(183, 391);
+        CurrentProductTextBox.Name = "CurrentProductTextBox";
+        CurrentProductTextBox.Size = new Size(258, 27);
+        CurrentProductTextBox.TabIndex = 1;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(459, 421);
+        ClientSize = new Size(459, 431);
+        Controls.Add(CurrentProductTextBox);
         Controls.Add(ProductsListBox);
         FormBorderStyle = FormBorderStyle.FixedToolWindow;
         Name = "Form1";
         StartPosition = FormStartPosition.CenterScreen;
         Text = "Create buttons Core version";
         ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
 
     private ListBox ProductsListBox;
+    private TextBox CurrentProductTextBox;
 }

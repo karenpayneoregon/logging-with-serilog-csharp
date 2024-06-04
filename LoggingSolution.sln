@@ -70,7 +70,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonLogApp", "JsonLogApp\Js
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DumpObjectsApp", "DumpObjectsApp\DumpObjectsApp.csproj", "{D050130E-18B9-4ED4-8707-72F47E81BA6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionApp", "DependencyInjectionApp\DependencyInjectionApp.csproj", "{70FABAD5-4250-4932-BCF3-5416D17D0C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionApp", "DependencyInjectionApp\DependencyInjectionApp.csproj", "{70FABAD5-4250-4932-BCF3-5416D17D0C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredDataSamples", "StructuredDataSamples\StructuredDataSamples.csproj", "{FFFD4E78-23BA-4324-A874-A4EE20862C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -174,6 +176,10 @@ Global
 		{70FABAD5-4250-4932-BCF3-5416D17D0C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70FABAD5-4250-4932-BCF3-5416D17D0C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70FABAD5-4250-4932-BCF3-5416D17D0C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFFD4E78-23BA-4324-A874-A4EE20862C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFD4E78-23BA-4324-A874-A4EE20862C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFD4E78-23BA-4324-A874-A4EE20862C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFD4E78-23BA-4324-A874-A4EE20862C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +210,7 @@ Global
 		{458B3101-2DA0-421E-BE61-BFB890C03935} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{D050130E-18B9-4ED4-8707-72F47E81BA6D} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{70FABAD5-4250-4932-BCF3-5416D17D0C90} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
+		{FFFD4E78-23BA-4324-A874-A4EE20862C0B} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}

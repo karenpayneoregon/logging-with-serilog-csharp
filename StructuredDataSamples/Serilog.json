@@ -1,0 +1,15 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "formatter": "Serilog.Formatting.Json.JsonFormatter, Serilog",
+          "path": ".\\LogFiles\\log.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}

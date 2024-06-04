@@ -28,9 +28,6 @@ public class DataOperations
         }
         catch (Exception exception)
         {
-            /*
-             * Standard to get all the exception is to lose .Message
-             */
             Log.Error(exception.Message);
         }
 

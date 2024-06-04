@@ -6,8 +6,13 @@ By using logging as demonstrated in this project properties are written to a log
 
 For an experience developer the alternate is to step through code with breakpoints but then one needs to remember property values so logging is the better option.
 
+## First version
 
 ![screen](assets/screenShot.png)
+
+## Second version
+
+![screen](assets/screenShot_1.png)
 
 ## Data operations
 

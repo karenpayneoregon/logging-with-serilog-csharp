@@ -8,12 +8,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="readme.md" />
+		<None Remove="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="assets\csharp.ico" />
-	  <Content Include="readme.md" />
+		<Content Include="assets\csharp.ico" />
+		<Content Include="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -30,7 +30,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.4" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -38,9 +38,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="appsettings.json">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 </Project>
