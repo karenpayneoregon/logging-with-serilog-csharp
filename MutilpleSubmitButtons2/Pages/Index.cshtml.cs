@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MultipleSubmitButtons2.Classes;
 using Serilog;
@@ -6,11 +7,10 @@ using Serilog;
 namespace MultipleSubmitButtons2.Pages;
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public IndexModel()
     {
-        _logger = logger;
+
     }
 
     public void OnGet()
@@ -18,23 +18,47 @@ public class IndexModel : PageModel
         
     }
 
-    public IActionResult OnPostButton1(IFormCollection data)
+    public IActionResult OnPostCustomers()
     {
-        Log.Information("Entering {P1}", nameof(OnPostButton1));
+        Log.Information("Entering {P1}", nameof(OnPostCustomers));
+        BogusOperations.CustomersList(2, true);
         return new RedirectToPageResult("Index");
     }
 
 
-    public IActionResult OnPostButton2(IFormCollection data)
+    public IActionResult OnPostAge()
     {
-        Log.Information("Entering {P1}", nameof(OnPostButton2));
+        var birthDate = new DateOnly(1956, 9, 24);
+        Log.Information("Birth: {Birth} Age: {Age}", birthDate,birthDate.GetAge());
         return new RedirectToPageResult("Index");
     }
 
-    public IActionResult OnPostButton3(IFormCollection data)
+    public IActionResult OnPostHowdy()
     {
         Log.Information("{TimeOfDay} {UserName} to working with {title} some number {number}", Howdy.TimeOfDay(), "Karen", "SeriLog",100);
         return new RedirectToPageResult("Index");
     }
+
+    public IActionResult OnPostException()
+    {
+        Exception ex = new Exception("This is a test exception");
+        Log.Error(ex, "This is a test exception");
+        return new RedirectToPageResult("Index");
+    }
+    #region handlers 
+
+
+    public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
+    {
+        var postInfoName = context.HandlerMethod?.Name;
+
+        if (postInfoName is not null)
+        {
+            Log.Information("Processing {@Caller}", postInfoName);
+        }
+        
+        base.OnPageHandlerExecuting(context);
+    }
+    #endregion
 }
 

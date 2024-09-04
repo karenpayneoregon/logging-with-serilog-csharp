@@ -17,7 +17,7 @@ public class SetupLogging
     {
 
         Log.Logger = new LoggerConfiguration()
-            .WriteTo.Console(theme: SeriLogCustomThemes.Theme1())
+            .WriteTo.Console(theme: SeriLogCustomThemes.KarenConsoleTheme())
             .CreateLogger();
     }
 

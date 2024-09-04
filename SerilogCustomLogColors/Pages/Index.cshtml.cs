@@ -20,14 +20,14 @@ public class IndexModel : PageModel
     {
 
     }
-    public IActionResult OnPostButton1(IFormCollection data)
+    public IActionResult OnPostButton1()
     {
         Log.Information("Entering {method}", nameof(OnPostButton1));
         return new RedirectToPageResult("Index");
     }
 
 
-    public IActionResult OnPostButton2(IFormCollection data)
+    public IActionResult OnPostButton2()
     {
         var list = Operations.GenerateStudents();
         for (int index = 0; index < list.Count; index++)
@@ -37,13 +37,13 @@ public class IndexModel : PageModel
         return new RedirectToPageResult("Index");
     }
 
-    public IActionResult OnPostButton3(IFormCollection data)
+    public IActionResult OnPostButton3()
     {
         Log.Information("{TimeOfDay} {UserName} to working with {title} some number {number}", Howdy.TimeOfDay(), "Karen", "SeriLog", 100);
         return new RedirectToPageResult("Index");
     }
 
-    public IActionResult OnPostButton4(IFormCollection data)
+    public IActionResult OnPostButton4()
     {
         Log.Information("Is {day} a weekend day? {IsWeekday} ",DateTime.Today.DayOfWeek,  DateTime.Now.IsWeekDay());
         return new RedirectToPageResult("Index");
@@ -53,6 +53,7 @@ public class IndexModel : PageModel
 
     public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
     {
+        var test = context.HandlerMethod!.MethodInfo.Name;
         if (context.HandlerMethod!.MethodInfo.Name == nameof(OnPostButton4))
         {
             Log.Information("Redirecting to {p1}", "OtherPage");

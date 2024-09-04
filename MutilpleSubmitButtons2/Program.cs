@@ -1,4 +1,6 @@
 using MultipleSubmitButtons2.Classes;
+using Serilog;
+using SeriLogLibrary;
 
 namespace MultipleSubmitButtons2;
 
@@ -9,9 +11,15 @@ public class Program
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddRazorPages();
-        
-        //SetupLogging.DevelopmentColored(builder);
-        SetupLogging.Development();
+
+        /*
+         * Setup SeriLog to use custom colors
+         */
+        builder.Host.UseSerilog((context, configuration) =>
+        {
+            configuration.WriteTo.Console(theme: SeriLogCustomThemes.KarenConsoleTheme());
+            configuration.ReadFrom.Configuration(context.Configuration);
+        });
 
         var app = builder.Build();
 
@@ -29,6 +37,8 @@ public class Program
         app.UseAuthorization();
 
         app.MapRazorPages();
+
+        WindowHelper.SetConsoleWindowTitle(app, "SeriLog colors");
 
         app.Run();
     }

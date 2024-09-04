@@ -1,5 +1,10 @@
 ﻿# About
 
+**09-04-2024**
+
+- Change theme
+- Uses dependency injection to configure SeriLog rather than use Classes\SetupLogging.cs along with settings in appsettings.json
+
 An example using SeriLog demonstrates
 
 - Using a class to setup logging called in Program class
