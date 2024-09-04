@@ -13,11 +13,14 @@ public class Program
         builder.Services.AddRazorPages();
 
         /*
-         * Setup SeriLog to use custom colors
+         * Setup SeriLog to use custom colors and log to a file.
          */
         builder.Host.UseSerilog((context, configuration) =>
         {
             configuration.WriteTo.Console(theme: SeriLogCustomThemes.KarenConsoleTheme());
+            configuration.WriteTo.File(
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LogFiles", "Log.txt"),
+                rollingInterval: RollingInterval.Day);
             configuration.ReadFrom.Configuration(context.Configuration);
         });
 
