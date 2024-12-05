@@ -7,6 +7,7 @@ namespace SeriLogLibrary;
 /// </summary>
 public class SeriLogCustomThemes
 {
+
     /// <summary>
     /// Custom theme.<br/>
     /// Text: Green<br/>
