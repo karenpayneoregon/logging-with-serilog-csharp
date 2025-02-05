@@ -53,10 +53,16 @@ public static class DbContexts
                     DbContextLoggerOptions.DefaultWithLocalTime | DbContextLoggerOptions.SingleLine));
 
     }
+
     /// <summary>
-    /// Production logging for EF Core
+    /// Configures production logging for Entity Framework Core.
     /// </summary>
-    /// <param name="collection"></param>
+    /// <param name="collection">The <see cref="IServiceCollection"/> to which the DbContext is added.</param>
+    /// <param name="builder">The <see cref="WebApplicationBuilder"/> used to access configuration settings.</param>
+    /// <remarks>
+    /// This method sets up logging for EF Core in a production environment by adding a DbContext pool
+    /// and configuring it to log database operations using a custom logger.
+    /// </remarks>
     public static void ProductionLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
     {
         

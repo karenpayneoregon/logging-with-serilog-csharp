@@ -78,6 +78,8 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "WinFormsApp3", "WinFormsApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.ExpressionsAndITextFormatter", "Serilog.ExpressionsAndITextFormatter\Serilog.ExpressionsAndITextFormatter.csproj", "{CDF51B04-E841-4880-B85D-73829693F010}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogFiltering", "SerilogFiltering\SerilogFiltering.csproj", "{06A25931-59D8-4632-B195-889A07D9B9CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,10 @@ Global
 		{CDF51B04-E841-4880-B85D-73829693F010}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF51B04-E841-4880-B85D-73829693F010}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF51B04-E841-4880-B85D-73829693F010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A25931-59D8-4632-B195-889A07D9B9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A25931-59D8-4632-B195-889A07D9B9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A25931-59D8-4632-B195-889A07D9B9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A25931-59D8-4632-B195-889A07D9B9CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -225,6 +231,7 @@ Global
 		{FFFD4E78-23BA-4324-A874-A4EE20862C0B} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{8352ACAB-0842-4F94-B0BA-7988A5CA9581} = {B58EB920-3349-4FC8-A320-A29E6185C9A8}
 		{CDF51B04-E841-4880-B85D-73829693F010} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
+		{06A25931-59D8-4632-B195-889A07D9B9CC} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}
