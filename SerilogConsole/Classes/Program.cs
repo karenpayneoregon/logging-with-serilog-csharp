@@ -3,6 +3,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SpectreConsole;
 
+// ReSharper disable once CheckNamespace
 namespace SerilogConsole;
 internal partial class Program
 {

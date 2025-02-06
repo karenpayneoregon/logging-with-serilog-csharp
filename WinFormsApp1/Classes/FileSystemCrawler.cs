@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Concurrent;
 
 namespace WinFormsApp1.Classes;
+
+/// <summary>
+/// Represents a file system crawler that traverses directories and performs operations on them.
+/// </summary>
+/// <remarks>
+/// This class is designed to recursively explore directories starting from a specified path.
+/// It utilizes asynchronous tasks to handle directory traversal efficiently.
+/// </remarks>
 public class FileSystemCrawler
 {
     public int NumFolders { get; set; }
@@ -30,12 +33,14 @@ public class FileSystemCrawler
         try
         {
             DirectoryInfo[] directoryInfos = dir.GetDirectories();
+
             foreach (DirectoryInfo childInfo in directoryInfos)
             {
                 // here may be dragons using enumeration variable as closure!!
                 DirectoryInfo di = childInfo;
                 tasks.Add(Task.Run(() => CrawlFolder(di)));
             }
+
             // Do something with the current folder
             // e.g. Console.WriteLine($"{dir.FullName}");
             NumFolders++;

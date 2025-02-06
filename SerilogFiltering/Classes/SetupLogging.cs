@@ -24,20 +24,24 @@ internal class SetupLogging
     /// </remarks>
     public static void Development()
     {
+        /*
+         * For demonstration purposes, the log files are stored in a directory named "LogFiles" in the application's base directory.
+         * Out in production the location would be on a server.
+         */
         var logDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LogFiles", $"{Now:yyyy-MM-dd}");
 
         Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .MinimumLevel.Information()
 
-            // General logging (Excludes Person logs)
+            // General logging (Excludes IPerson logs)
             .WriteTo.Logger(lc => lc
                 .Filter.ByExcluding(Matching.WithProperty("Category", nameof(IPerson)))
                 .WriteTo.File(Path.Combine(logDirectory, "Log.txt"),
                     rollingInterval: RollingInterval.Infinite,
                     outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{Level}] {Message}{NewLine}{Exception}"))
 
-            // Person-specific logging (Only includes Person logs)
+            // IPerson-specific logging (Only includes IPerson logs)
             .WriteTo.Logger(lc => lc
                 .Filter.ByIncludingOnly(Matching.WithProperty("Category", nameof(IPerson)))
                 .WriteTo.File(Path.Combine(logDirectory, $"{nameof(Person)}.txt"),

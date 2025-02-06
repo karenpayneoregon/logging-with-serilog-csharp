@@ -2,6 +2,11 @@
 
 public static class Extensions
 {
+    /// <summary>
+    /// Calculates the age based on the provided date of birth.
+    /// </summary>
+    /// <param name="dateOfBirth">The date of birth to calculate the age from.</param>
+    /// <returns>The calculated age as an integer.</returns>
     public static int GetAge(this DateOnly dateOfBirth)
     {
         var today = DateTime.Today;

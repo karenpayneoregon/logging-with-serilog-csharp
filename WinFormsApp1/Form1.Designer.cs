@@ -87,7 +87,6 @@ partial class Form1
         button2.TabIndex = 4;
         button2.Text = "button2";
         button2.UseVisualStyleBackColor = true;
-        button2.Click += button2_Click;
         // 
         // StartButton
         // 
@@ -98,7 +97,6 @@ partial class Form1
         StartButton.Text = "Start";
         StartButton.TextAlign = ContentAlignment.BottomCenter;
         StartButton.UseVisualStyleBackColor = true;
-        StartButton.Click += StartButton_Click;
         // 
         // CancelButton
         // 
@@ -108,7 +106,6 @@ partial class Form1
         CancelButton.TabIndex = 6;
         CancelButton.Text = "Cancel";
         CancelButton.UseVisualStyleBackColor = true;
-        CancelButton.Click += CancelButton_Click;
         // 
         // Start1Button
         // 
@@ -118,7 +115,6 @@ partial class Form1
         Start1Button.TabIndex = 7;
         Start1Button.Text = "Start 1";
         Start1Button.UseVisualStyleBackColor = true;
-        Start1Button.Click += Start1Button_Click;
         // 
         // Cancel1Button
         // 

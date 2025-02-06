@@ -8,8 +8,24 @@ namespace ConditionalLogging.Classes;
 public class SetupLogging
 {
     /// <summary>
-    /// Development logging
+    /// Configures and initializes logging for the development environment.
     /// </summary>
+    /// <remarks>
+    /// This method sets up logging using Serilog. It reads configuration settings from the 
+    /// "appsettings.json" file to determine whether SQL command logging is enabled. Depending on 
+    /// the configuration, it creates a logger with appropriate settings, including console and 
+    /// file sinks, log levels, and output templates.
+    /// </remarks>
+    /// <exception cref="System.IO.IOException">
+    /// Thrown if there is an issue accessing the log file path.
+    /// </exception>
+    /// <example>
+    /// To use this method, call it at the start of your application:
+    /// <code>
+    /// SetupLogging.Development();
+    /// Log.Information("Application started.");
+    /// </code>
+    /// </example>
     public static void Development()
     {
         IConfigurationRoot configuration = new ConfigurationBuilder()

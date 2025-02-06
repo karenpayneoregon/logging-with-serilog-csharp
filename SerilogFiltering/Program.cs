@@ -1,8 +1,6 @@
 ﻿using Serilog;
 using SerilogFiltering.Interfaces;
-using System.Xml.Linq;
 using SerilogFiltering.Classes;
-using SerilogFiltering.Models;
 
 namespace SerilogFiltering;
 
@@ -13,11 +11,10 @@ internal partial class Program
         Log.Information("Hello");
         List<IPerson> people = MockedData.List();
 
-        people.FirstOrDefault().LogDetails();
 
-        foreach (var person in people)
+        foreach (var (index, person) in people.Index())
         {
-            Console.WriteLine(person);
+            Console.WriteLine($"{index,-5}{person}");
             person.LogDetails();
         }
         

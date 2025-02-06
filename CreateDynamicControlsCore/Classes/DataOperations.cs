@@ -9,9 +9,14 @@ namespace CreateDynamicControlsCore.Classes;
 public class DataOperations
 {
     /// <summary>
-    /// Read all categories
+    /// Retrieves a list of categories from the database.
     /// </summary>
-    /// <returns>list of categories</returns>
+    /// <remarks>
+    /// This method connects to the database, executes a query to fetch all categories,
+    /// and maps the results to a list of <see cref="Category"/> objects. 
+    /// If an exception occurs during the operation, it is logged using Serilog.
+    /// </remarks>
+    /// <returns>A list of <see cref="Category"/> objects representing the categories.</returns>
     public static List<Category> ReadCategories()
     {
         var list = new List<Category>();
@@ -35,10 +40,14 @@ public class DataOperations
             
     }
     /// <summary>
-    /// Read products by category identifier
+    /// Retrieves a list of products associated with a specific category identifier.
     /// </summary>
-    /// <param name="identifier">category identifier</param>
-    /// <returns>list of products for category</returns>
+    /// <param name="identifier">The unique identifier of the category.</param>
+    /// <returns>A list of <see cref="Product"/> objects representing the products in the specified category.</returns>
+    /// <remarks>
+    /// This method establishes a connection to the database, executes a query to fetch products
+    /// belonging to the specified category, and maps the results to a list of <see cref="Product"/> objects.
+    /// </remarks>
     public static List<Product> ReadProducts(int identifier)
     {
         using SqlConnection cn = new() { ConnectionString = ConnectionString() };
