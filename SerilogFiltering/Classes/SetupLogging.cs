@@ -5,6 +5,16 @@ using SerilogFiltering.Interfaces;
 using static System.DateTime;
 
 namespace SerilogFiltering.Classes;
+
+/// <summary>
+/// Provides functionality to configure and set up logging using Serilog.
+/// </summary>
+/// <remarks>
+/// This class is responsible for initializing and configuring the Serilog logger
+/// with specific settings tailored for different logging requirements.
+/// It includes methods to set up logging for development environments, ensuring
+/// that logs are categorized and stored appropriately.
+/// </remarks>
 internal class SetupLogging
 {
     /// <summary>
