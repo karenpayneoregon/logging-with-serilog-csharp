@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020Library.Models;
+#pragma warning disable CS8603 // Possible null reference return.
 
 namespace NorthWind2020Library.Classes
 {
