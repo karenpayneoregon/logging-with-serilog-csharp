@@ -30,7 +30,7 @@ internal partial class Program
     public static void Init()
     {
         SetupLogging.Development();
-        Console.Title = "Code sample";
+        Console.Title = "Serilog Code sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
     }
 
