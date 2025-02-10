@@ -45,7 +45,8 @@ internal partial class Program
     /// <c>true</c> if Serilog timing is enabled; otherwise, <c>false</c>.
     /// </returns>
     private static bool UseSerilogTiming() 
-        => ConfigurationRoot().GetSection("ApplicationSettings").Get<ApplicationSettings>().UseSerilogTiming;
+        => ConfigurationRoot().GetSection(nameof(ApplicationSettings))
+            .Get<ApplicationSettings>().UseSerilogTiming;
 
     /// <summary>
     /// Builds and retrieves the application's configuration root.
