@@ -12,6 +12,7 @@ internal partial class Program
     static void Main(string[] args)
     {
         
+        // writes to log.txt
         Log.Information("Start of code sample");
 
         List<IPerson> people = MockedData.List();
@@ -51,6 +52,7 @@ internal partial class Program
         foreach (var (index, person) in people.Index())
         {
             Console.WriteLine($"{index,-5}{person}");
+            // writes to person.txt
             person.LogDetails();
         }
 
@@ -73,6 +75,7 @@ internal partial class Program
         foreach (var (index, person) in people.Index())
         {
             Console.WriteLine($"{index,-5}{person}");
+            // writes to person.txt
             person.LogDetails();
         }
 
