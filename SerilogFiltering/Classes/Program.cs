@@ -58,6 +58,9 @@ internal partial class Program
     /// <returns>
     /// An instance of <see cref="IConfigurationRoot"/> representing the application's configuration.
     /// </returns>
+    /// <remarks>
+    /// Environment variables can be used to override the configuration values.
+    /// </remarks>
     private static IConfigurationRoot ConfigurationRoot() =>
         new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
