@@ -25,6 +25,7 @@ public class Program
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.File(
+                    // change the path to the log file actual location
                     Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LogFiles", $"{Now.Year}-{Now.Month}-{Now.Day}",
                         "Log.txt"),
                     rollingInterval: RollingInterval.Infinite,
