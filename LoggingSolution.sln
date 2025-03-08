@@ -78,6 +78,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.ExpressionsAndIText
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogFiltering", "SerilogFiltering\SerilogFiltering.csproj", "{06A25931-59D8-4632-B195-889A07D9B9CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideSystemLogging", "OverrideSystemLogging\OverrideSystemLogging.csproj", "{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,10 @@ Global
 		{06A25931-59D8-4632-B195-889A07D9B9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06A25931-59D8-4632-B195-889A07D9B9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06A25931-59D8-4632-B195-889A07D9B9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -225,6 +231,7 @@ Global
 		{FFFD4E78-23BA-4324-A874-A4EE20862C0B} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{CDF51B04-E841-4880-B85D-73829693F010} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{06A25931-59D8-4632-B195-889A07D9B9CC} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
+		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}

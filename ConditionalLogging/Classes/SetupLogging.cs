@@ -16,7 +16,7 @@ public class SetupLogging
     /// the configuration, it creates a logger with appropriate settings, including console and 
     /// file sinks, log levels, and output templates.
     /// </remarks>
-    /// <exception cref="System.IO.IOException">
+    /// <exception cref="IOException">
     /// Thrown if there is an issue accessing the log file path.
     /// </exception>
     /// <example>
