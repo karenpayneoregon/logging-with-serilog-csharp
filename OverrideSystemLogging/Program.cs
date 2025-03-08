@@ -1,3 +1,4 @@
+using OverrideSystemLogging.Classes;
 using Serilog;
 
 namespace OverrideSystemLogging;
@@ -13,7 +14,7 @@ public class Program
             .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)  // Suppress ASP.NET Core logs
             .MinimumLevel.Override("System", Serilog.Events.LogEventLevel.Warning)  // Suppress System logs
             .MinimumLevel.Information()
-            .WriteTo.Console()
+            .WriteTo.Console(theme: SeriLogCustomThemes.Theme())
             .CreateLogger();
 
         // Add Serilog to the logging pipeline
