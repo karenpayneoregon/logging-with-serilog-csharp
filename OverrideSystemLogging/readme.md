@@ -2,6 +2,7 @@
 
 An example of using Serilog is in Program.cs filters out system logging.
 
+The idea is to allow focus to be on a developer's own logging and not be distracted by system logging while for instance debugging.
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
