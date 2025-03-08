@@ -35,8 +35,8 @@ public class Program
 
 
 
-            // Add Serilog to the logging pipeline
-            builder.Host.UseSerilog();
+        // Add Serilog to the logging pipeline
+        builder.Host.UseSerilog();
 
         // Add services to the container.
         builder.Services.AddRazorPages();
