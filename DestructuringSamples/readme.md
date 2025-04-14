@@ -4,6 +4,11 @@ Using Serilog demonstrates how to implement a custom destructuring policy. This 
 
 Here when logging a `Customer` object, we only want to log the `FirstName`, `LastName`, and `OfficePhoneNumber` properties. The rest of the properties are ignored.
 
+## Configuration
+
+See Classes\Program.cs for the configuration of Serilog.
+
+
 ## Model
 
 ```csharp
