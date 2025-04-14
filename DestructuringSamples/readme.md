@@ -6,7 +6,7 @@ Here when logging a `Customer` object, we only want to log the `FirstName`, `Las
 
 ## Configuration
 
-See Classes\Program.cs for the configuration of Serilog.
+See `Classes\Program.cs` for the configuration of Serilog.
 
 
 ## Model
