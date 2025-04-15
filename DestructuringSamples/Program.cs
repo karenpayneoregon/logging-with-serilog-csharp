@@ -14,7 +14,7 @@ internal partial class Program
             Log.Information("Customers {@C}", customer);
         }
 
-        AnsiConsole.MarkupLine("[v]Done[/]");
+        AnsiConsole.MarkupLine("[yellow]Done[/]");
         Console.ReadLine();
     }
 }
