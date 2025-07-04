@@ -82,6 +82,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideSystemLogging", "Ov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DestructuringSamples", "DestructuringSamples\DestructuringSamples.csproj", "{0DF9D04F-C32F-45B3-A42C-EE69AFD6CA13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DestructuringSamples1", "DestructuringSamples1\DestructuringSamples1.csproj", "{B350CF1B-7905-452D-8B27-531DED2C2D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -204,6 +206,10 @@ Global
 		{0DF9D04F-C32F-45B3-A42C-EE69AFD6CA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DF9D04F-C32F-45B3-A42C-EE69AFD6CA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DF9D04F-C32F-45B3-A42C-EE69AFD6CA13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B350CF1B-7905-452D-8B27-531DED2C2D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B350CF1B-7905-452D-8B27-531DED2C2D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B350CF1B-7905-452D-8B27-531DED2C2D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B350CF1B-7905-452D-8B27-531DED2C2D7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,6 +245,7 @@ Global
 		{06A25931-59D8-4632-B195-889A07D9B9CC} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{E9C701CA-9CDD-40C5-A0C2-13AE0051EEC5} = {3D6043FE-BBF6-40C5-B5F0-4DFB2FDA9CA9}
 		{0DF9D04F-C32F-45B3-A42C-EE69AFD6CA13} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
+		{B350CF1B-7905-452D-8B27-531DED2C2D7D} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}

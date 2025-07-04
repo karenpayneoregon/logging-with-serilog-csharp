@@ -1,21 +1,19 @@
-﻿using DestructuringSamples.Classes;
-using Serilog;
-using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 
 // ReSharper disable once CheckNamespace
-namespace DestructuringSamples;
+namespace DestructuringSamples1;
 internal partial class Program
 {
     [ModuleInitializer]
     public static void Init()
     {
         AnsiConsole.MarkupLine("");
-        var assembly = Assembly.GetEntryAssembly();
-        var product = assembly?.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
-
-        Console.Title = product!;
+        Console.Title = "Code sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
-
     }
 }
