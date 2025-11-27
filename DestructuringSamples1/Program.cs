@@ -1,4 +1,4 @@
-﻿using Destructurama;
+﻿
 using DestructuringSamples1.Classes;
 using Serilog;
 
@@ -9,7 +9,6 @@ internal partial class Program
     static void Main(string[] args)
     {
         Log.Logger = new LoggerConfiguration()
-            .Destructure.UsingAttributes()
             .WriteTo.Console()
             .CreateLogger();
 

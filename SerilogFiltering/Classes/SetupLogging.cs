@@ -34,6 +34,8 @@ internal class SetupLogging
     /// </remarks>
     public static void Development()
     {
+        const string outputTemplate = 
+            "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message}{NewLine}in method {MemberName} at {FilePath}:{LineNumber}{NewLine}{Exception}{NewLine}";
         /*
          * For demonstration purposes, the log files are stored in a directory named "LogFiles" in the application's base directory.
          * Out in production the location would be on a server.
@@ -49,14 +51,14 @@ internal class SetupLogging
                 .Filter.ByExcluding(Matching.WithProperty("Category", nameof(IPerson)))
                 .WriteTo.File(Path.Combine(logDirectory, "Log.txt"),
                     rollingInterval: RollingInterval.Infinite,
-                    outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{Level}] {Message}{NewLine}{Exception}"))
+                    outputTemplate: outputTemplate))
 
             // IPerson-specific logging (Only includes IPerson logs)
             .WriteTo.Logger(lc => lc
                 .Filter.ByIncludingOnly(Matching.WithProperty("Category", nameof(IPerson)))
                 .WriteTo.File(Path.Combine(logDirectory, $"{nameof(Person)}.txt"),
                     rollingInterval: RollingInterval.Infinite,
-                    outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{Level}] {Message}{NewLine}{Exception}"))
+                    outputTemplate: outputTemplate))
 
             .CreateLogger();
     }

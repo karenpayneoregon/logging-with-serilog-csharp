@@ -23,6 +23,7 @@ public class IndexModel : PageModel
     public IActionResult OnPostButton1()
     {
         Log.Information("Entering {method}", nameof(OnPostButton1));
+        Console.WriteLine();
         return new RedirectToPageResult("Index");
     }
 
@@ -34,18 +35,23 @@ public class IndexModel : PageModel
         {
             Log.Information("First: {P1} Last: {P2} Grade: {P3}", list[index].FirstName, list[index].LastName, list[index].Grade);
         }
+
+        Console.WriteLine();
+        
         return new RedirectToPageResult("Index");
     }
 
     public IActionResult OnPostButton3()
     {
         Log.Information("{TimeOfDay} {UserName} to working with {title} some number {number}", Howdy.TimeOfDay(), "Karen", "SeriLog", 100);
+        Console.WriteLine();
         return new RedirectToPageResult("Index");
     }
 
     public IActionResult OnPostButton4()
     {
         Log.Information("Is {day} a weekend day? {IsWeekday} ",DateTime.Today.DayOfWeek,  DateTime.Now.IsWeekDay());
+        Console.WriteLine();
         return new RedirectToPageResult("Index");
     }
     #region handlers 
