@@ -2,6 +2,8 @@
 
 An example project demonstrating EF Core [SaveChangesInterceptor](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.diagnostics.savechangesinterceptor?view=efcore-10.0) to log changes made to data.
 
+:bulb: [Article](https://dev.to/karenpayneoregon/serilog-get-the-last-log-file-4iil)
+
 ## Get last logged file name in Serilog
 
 [Serilog](https://www.nuget.org/packages/Serilog/4.3.0?_src=template) is configured to write log files to a specific folder with rolling files. This example demonstrates how to retrieve the most recent log file name using `Microsoft.Extensions.FileSystemGlobbing`.
