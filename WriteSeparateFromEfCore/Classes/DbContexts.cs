@@ -27,25 +27,37 @@ public static class DbContexts
         }
     }
 
+
     /// <summary>
-    /// Enable sensitive logging for EF Core
+    /// Configures the application to use a database connection with sensitive data logging enabled.
     /// </summary>
-    public static void SensitiveDataLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
+    /// <param name="builder">The <see cref="WebApplicationBuilder"/> used to configure the application.</param>
+    /// <remarks>
+    /// This method sets up the database context to log sensitive data. 
+    /// It is intended for use in development environments only and should not be used in production.
+    /// </remarks>
+    public static void SensitiveDataLoggingConnection(this WebApplicationBuilder builder)
     {
 
-        collection.AddDbContextPool<Context>(options =>
+        builder.Services.AddDbContextPool<Context>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging()
                 .LogTo(new DbContextToFileLogger().Log));
     }
 
     /// <summary>
-    /// Single line logging with sensitive data enabled for EF Core
+    /// Configures single-line logging with sensitive data enabled for Entity Framework Core.
     /// </summary>
-    public static void SingleLineSensitiveDataLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
+    /// <param name="builder">The <see cref="WebApplicationBuilder"/> used to configure the application and services.</param>
+    /// <remarks>
+    /// This method sets up logging for EF Core by enabling sensitive data logging and configuring
+    /// the logger to use single-line formatting with local time. It is intended for development
+    /// environments where detailed logging is required.
+    /// </remarks>
+    public static void SingleLineSensitiveDataLoggingConnection(this WebApplicationBuilder builder)
     {
 
-        collection.AddDbContextPool<Context>(options =>
+        builder.Services.AddDbContextPool<Context>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .EnableSensitiveDataLogging().LogTo(
                     new DbContextToFileLogger().Log,
@@ -57,16 +69,15 @@ public static class DbContexts
     /// <summary>
     /// Configures production logging for Entity Framework Core.
     /// </summary>
-    /// <param name="collection">The <see cref="IServiceCollection"/> to which the DbContext is added.</param>
-    /// <param name="builder">The <see cref="WebApplicationBuilder"/> used to access configuration settings.</param>
+    /// <param name="builder">The <see cref="WebApplicationBuilder"/> used to configure the application and services.</param>
     /// <remarks>
     /// This method sets up logging for EF Core in a production environment by adding a DbContext pool
     /// and configuring it to log database operations using a custom logger.
     /// </remarks>
-    public static void ProductionLoggingConnection(this IServiceCollection collection, WebApplicationBuilder builder)
+    public static void ProductionLoggingConnection(this WebApplicationBuilder builder)
     {
         
-        collection.AddDbContextPool<Context>(options =>
+        builder.Services.AddDbContextPool<Context>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 .LogTo(
                     new DbContextToFileLogger().Log));

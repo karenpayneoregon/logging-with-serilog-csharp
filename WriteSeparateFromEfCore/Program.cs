@@ -14,12 +14,12 @@ public class Program
         {
 
             SetupLogging.Development();
-            builder.Services.SensitiveDataLoggingConnection(builder);
+            builder.SensitiveDataLoggingConnection();
         }
         else
         {
             SetupLogging.Production();
-            builder.Services.ProductionLoggingConnection(builder);
+            builder.ProductionLoggingConnection();
         }
 
         var app = builder.Build();

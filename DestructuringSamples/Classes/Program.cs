@@ -1,6 +1,4 @@
-﻿using DestructuringSamples.Classes;
-using Serilog;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
