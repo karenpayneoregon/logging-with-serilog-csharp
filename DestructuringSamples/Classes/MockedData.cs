@@ -14,7 +14,8 @@ public static class MockedData
             LastName = "Johnson",
             DateOfBirth = new DateOnly(1990, 5, 24),
             OfficeEmail = "alice.johnson@example.com",
-            OfficePhoneNumber = "555-1234"
+            OfficePhoneNumber = "555-1234",
+            SocialSecurityNumber = "623114070"
         },
 
         new Customer
@@ -25,7 +26,8 @@ public static class MockedData
             LastName = "Smith",
             DateOfBirth = new DateOnly(1985, 3, 15),
             OfficeEmail = "bob.smith@example.com",
-            OfficePhoneNumber = "555-5678"
+            OfficePhoneNumber = "555-5678",
+            SocialSecurityNumber = "034755231"
         },
 
         new Customer
@@ -36,7 +38,8 @@ public static class MockedData
             LastName = "Williams",
             DateOfBirth = new DateOnly(1992, 11, 2),
             OfficeEmail = "carol.williams@example.com",
-            OfficePhoneNumber = "555-9012"
+            OfficePhoneNumber = "555-9012",
+            SocialSecurityNumber = "243779786"
         },
 
         new Customer
@@ -47,7 +50,8 @@ public static class MockedData
             LastName = "Brown",
             DateOfBirth = new DateOnly(1988, 7, 18),
             OfficeEmail = "david.brown@example.com",
-            OfficePhoneNumber = "555-3456"
+            OfficePhoneNumber = "555-3456",
+            SocialSecurityNumber = "834925698"
         },
 
         new Customer
@@ -58,7 +62,8 @@ public static class MockedData
             LastName = "Davis",
             DateOfBirth = new DateOnly(1995, 1, 30),
             OfficeEmail = "eve.davis@example.com",
-            OfficePhoneNumber = "555-7890"
+            OfficePhoneNumber = "555-7890",
+            SocialSecurityNumber = "168182508"
         }
     ];
 }

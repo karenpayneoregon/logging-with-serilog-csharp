@@ -11,4 +11,5 @@ public class Customer : ICustomer
     public DateOnly DateOfBirth { get; set; }
     public string OfficeEmail { get; set; }
     public string OfficePhoneNumber { get; set; }
+    public string SocialSecurityNumber { get; set; }
 }

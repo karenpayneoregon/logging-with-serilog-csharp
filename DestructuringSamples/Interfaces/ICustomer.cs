@@ -9,4 +9,5 @@ public interface ICustomer
     DateOnly DateOfBirth { get; set; }
     string OfficeEmail { get; set; }
     string OfficePhoneNumber { get; set; }
+    string SocialSecurityNumber { get; set; }
 }
