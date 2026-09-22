@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32825.248
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12210.168 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HidePathInExceptions", "HidePathInExceptions\HidePathInExceptions.csproj", "{A1BC692F-2513-4606-B266-29F8018E27AC}"
 EndProject
@@ -99,6 +99,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Read from json", "Read from json", "{32C4A9A5-47F9-D2CA-BC06-49B6DC64B4FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogReadSettingsFromJson", "SerilogReadSettingsFromJson\SerilogReadSettingsFromJson.csproj", "{5ABAE656-66F9-408E-B2DC-F2BD585172C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core3", "EF_Core3\EF_Core3.csproj", "{362F8EB1-748D-4B95-8F28-B6E34648029E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,6 +248,10 @@ Global
 		{5ABAE656-66F9-408E-B2DC-F2BD585172C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABAE656-66F9-408E-B2DC-F2BD585172C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABAE656-66F9-408E-B2DC-F2BD585172C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362F8EB1-748D-4B95-8F28-B6E34648029E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362F8EB1-748D-4B95-8F28-B6E34648029E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362F8EB1-748D-4B95-8F28-B6E34648029E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362F8EB1-748D-4B95-8F28-B6E34648029E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -289,6 +295,7 @@ Global
 		{67EE91A2-C12C-49C2-8DB0-FA7DAB980709} = {F9B6F1A8-5124-4561-9DEC-6D9A36A89A72}
 		{7BD0869D-E986-E050-906F-38F3668DFD88} = {5ADD02E8-12CB-4191-8EC1-C0FB0750BA6B}
 		{5ABAE656-66F9-408E-B2DC-F2BD585172C8} = {32C4A9A5-47F9-D2CA-BC06-49B6DC64B4FB}
+		{362F8EB1-748D-4B95-8F28-B6E34648029E} = {18C7BF46-34D6-4735-8C96-DB55E58F2797}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20C28C71-F936-4E8F-AA46-D277BEE96A65}
