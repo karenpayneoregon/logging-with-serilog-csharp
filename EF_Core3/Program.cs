@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using EF_Core3.Classes;
 using EF_Core3.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -17,6 +18,9 @@ namespace EF_Core3
             //});
             
             var builder = WebApplication.CreateBuilder(args);
+
+#if COMBINED_LOGS
+            
             builder.Host.UseSerilog((context, services, configuration) =>
                 configuration
                     .ReadFrom.Configuration(context.Configuration)
@@ -28,6 +32,20 @@ namespace EF_Core3
                 options.UseSqlServer(
                         builder.Configuration.GetConnectionString("DefaultConnection"))
                     .EnableSensitiveDataLogging());
+            
+#else
+
+            SetupLogging.Other(builder);
+
+            builder.Services.AddDbContextPool<Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                    .EnableSensitiveDataLogging()
+                    .LogTo(new DbContextToFileLogger().Log,
+                        [DbLoggerCategory.Database.Command.Name],
+                        LogLevel.Information));
+
+#endif
+
 
 
             builder.Services.AddRazorPages();
