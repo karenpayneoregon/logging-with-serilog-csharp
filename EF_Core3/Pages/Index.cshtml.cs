@@ -1,15 +1,19 @@
 using EF_Core3.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace EF_Core3.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel(Context context) : PageModel
     {
         public void OnGet()
         {
-            using var context = new Context();
-            var list = context.Contacts.ToList();
+            var contactsList = context.Contacts.ToList();
+            
+            var customersList = context.Customers
+                .Include(c => c.CountryIdentifierNavigation)
+                .ToList();
         }
     }
 }

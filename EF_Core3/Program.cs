@@ -9,27 +9,33 @@ namespace EF_Core3
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Information()
-                // Capture EF Core SQL commands and execution info without Debug spam
-                .MinimumLevel.Override("Microsoft.EntityFrameworkCore", Serilog.Events.LogEventLevel.Information)
-                .WriteTo.Console()
-                .CreateLogger();
-            
 
-            builder.Host.UseSerilog();
+            Serilog.Debugging.SelfLog.Enable(message =>
+            {
+                Debug.WriteLine(message);
+                Console.Error.WriteLine(message);
+            });
+            
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Host.UseSerilog((context, services, configuration) =>
+                configuration
+                    .ReadFrom.Configuration(context.Configuration)
+                    .ReadFrom.Services(services)
+                    .Enrich.FromLogContext());
+
+            //builder.Host.UseSerilog();
 
             builder.Services.AddDbContextPool<Context>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-                    .EnableSensitiveDataLogging()
-                    .LogTo(message =>
-                        Console.WriteLine(message), LogLevel.Information, null));
+                options.UseSqlServer(
+                        builder.Configuration.GetConnectionString("DefaultConnection"))
+                    .EnableSensitiveDataLogging());
 
 
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+
+            app.Logger.LogInformation("Serilog file logging test");
 
             if (!app.Environment.IsDevelopment())
             {
