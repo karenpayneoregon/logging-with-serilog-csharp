@@ -33,4 +33,8 @@
   <ItemGroup>
     <ProjectReference Include="..\SeriLogLibrary\SeriLogLibrary.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
 </Project>

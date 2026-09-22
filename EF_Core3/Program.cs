@@ -10,11 +10,11 @@ namespace EF_Core3
         public static void Main(string[] args)
         {
 
-            Serilog.Debugging.SelfLog.Enable(message =>
-            {
-                Debug.WriteLine(message);
-                Console.Error.WriteLine(message);
-            });
+            //Serilog.Debugging.SelfLog.Enable(message =>
+            //{
+            //    Debug.WriteLine(message);
+            //    Console.Error.WriteLine(message);
+            //});
             
             var builder = WebApplication.CreateBuilder(args);
             builder.Host.UseSerilog((context, services, configuration) =>
@@ -23,7 +23,6 @@ namespace EF_Core3
                     .ReadFrom.Services(services)
                     .Enrich.FromLogContext());
 
-            //builder.Host.UseSerilog();
 
             builder.Services.AddDbContextPool<Context>(options =>
                 options.UseSqlServer(
@@ -35,7 +34,7 @@ namespace EF_Core3
 
             var app = builder.Build();
 
-            app.Logger.LogInformation("Serilog file logging test");
+            //app.Logger.LogInformation("Serilog file logging test");
 
             if (!app.Environment.IsDevelopment())
             {
