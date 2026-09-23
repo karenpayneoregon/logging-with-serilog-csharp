@@ -4,6 +4,18 @@ namespace EF_Core3.Classes;
 
 public class SetupLogging
 {
+    /// <summary>
+    /// Configures Serilog logging for the application.
+    /// </summary>
+    /// <param name="builder">
+    /// The <see cref="WebApplicationBuilder"/> used to configure the application's services and middleware.
+    /// </param>
+    /// <remarks>
+    /// This method sets up Serilog as the logging provider, specifying logging levels, output destinations,
+    /// and formatting. It overrides the default logging levels for "Microsoft" and "System" namespaces
+    /// to <see cref="LogEventLevel.Warning"/> and sets the default logging level to <see cref="LogEventLevel.Information"/>.
+    /// Logs are written to both the console and a file located in the "LogFiles" directory.
+    /// </remarks>
     public static void Other(WebApplicationBuilder builder)
     {
 

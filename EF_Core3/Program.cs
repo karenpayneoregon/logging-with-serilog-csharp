@@ -38,7 +38,8 @@ namespace EF_Core3
             SetupLogging.Other(builder);
 
             builder.Services.AddDbContextPool<Context>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                options.UseSqlServer(
+                        builder.Configuration.GetConnectionString("DefaultConnection"))
                     .EnableSensitiveDataLogging()
                     .LogTo(new DbContextToFileLogger().Log,
                         [DbLoggerCategory.Database.Command.Name],
